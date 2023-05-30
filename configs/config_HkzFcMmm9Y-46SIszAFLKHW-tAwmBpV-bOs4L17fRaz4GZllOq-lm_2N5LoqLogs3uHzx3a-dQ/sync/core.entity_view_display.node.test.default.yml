@@ -1,0 +1,29 @@
+uuid: 43b6ef6e-e290-4e27-b162-75bbd03a1a0f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.test.field_test_name
+    - node.type.test
+  module:
+    - user
+id: node.test.default
+targetEntityType: node
+bundle: test
+mode: default
+content:
+  field_test_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
