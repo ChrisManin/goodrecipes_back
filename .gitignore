@@ -20,6 +20,7 @@
 # Ignore drupal core (if not versioning drupal sources)
 /core
 /vendor
+/modules/contrib/*
 /modules/README.txt
 /profiles/README.txt
 /themes/README.txt
