@@ -1,0 +1,18 @@
+uuid: 492cc3d5-c14a-4af4-bfb9-98e4dd52b309
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - serialization
+    - user
+id: file.upload
+plugin_id: 'file:upload'
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

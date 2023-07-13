@@ -1,0 +1,22 @@
+uuid: 72711b1f-d500-4be6-ae33-3bf5be2a78f9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - media
+    - serialization
+    - user
+id: entity.media
+plugin_id: 'entity:media'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - json
+    - xml
+  authentication:
+    - basic_auth
+    - cookie
