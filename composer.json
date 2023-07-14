@@ -47,6 +47,8 @@
         "drupal/field_permissions": "^1.2",
         "drupal/field_validation": "^1.0@RC",
         "drupal/fontawesome": "^2.26",
+        "drupal/gin": "^3.0@rc",
+        "drupal/gin_toolbar": "^1.0@rc",
         "drupal/image_widget_crop": "^2.4",
         "drupal/imagemagick": "^3.4",
         "drupal/inline_entity_form": "^1.0@RC",

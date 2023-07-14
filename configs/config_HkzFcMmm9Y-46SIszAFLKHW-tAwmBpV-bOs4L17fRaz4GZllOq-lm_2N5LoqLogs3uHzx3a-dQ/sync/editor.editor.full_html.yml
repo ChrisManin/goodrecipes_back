@@ -1,0 +1,94 @@
+uuid: 5041fee6-acf4-411c-891e-1325d51460b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor5
+_core:
+  default_config_hash: qtbIKnf_F-jhwZ-rl2ajm3BfFNPj8INYFVd2_5k6UFA
+format: full_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - underline
+      - removeFormat
+      - style
+      - '|'
+      - undo
+      - redo
+      - '|'
+      - link
+      - blockQuote
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - drupalInsertImage
+      - drupalMedia
+      - horizontalLine
+      - heading
+      - sourceEditing
+      - codeBlock
+      - alignment
+      - insertTable
+      - '|'
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: Titre
+          element: '<h1 class="title">'
+        -
+          label: Sous-titre
+          element: '<h2 class="subtitle">'
+        -
+          label: Note
+          element: '<p class="note">'
+        -
+          label: Basic
+          element: '<a class="button">'
+        -
+          label: Primary
+          element: '<a class="button_is-primary">'
+        -
+          label: Highlight
+          element: '<p class="highlight">'
+    editor_advanced_link_link:
+      enabled_attributes:
+        - class
+        - target
+    media_media:
+      allow_view_mode_override: false
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: 100Mo
+  max_dimensions:
+    width: 0
+    height: 0
