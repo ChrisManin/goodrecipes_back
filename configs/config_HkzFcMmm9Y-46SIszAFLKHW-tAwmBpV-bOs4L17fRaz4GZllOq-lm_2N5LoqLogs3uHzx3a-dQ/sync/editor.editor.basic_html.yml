@@ -1,0 +1,32 @@
+uuid: 455b0e68-23f5-4816-b605-91609fc9f379
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor5
+_core:
+  default_config_hash: lZlUTSJqWaN3iU0I0fhvQVgqf4ps9fxPPC-g_9aWIRc
+format: basic_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - underline
+      - '|'
+      - link
+  plugins:
+    editor_advanced_link_link:
+      enabled_attributes:
+        - target
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0
