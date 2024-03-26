@@ -27,6 +27,28 @@ gin_init:
   dependencies:
     - core/drupalSettings
 
+navigation:
+  css:
+    component:
+      dist/css/components/toolbar.css: { minified: false }
+      dist/css/components/toolbar_secondary.css: { minified: false }
+    theme:
+      dist/css/layout/navigation.css: { minified: false }
+  js:
+    js/navigation/vendor/floating-ui/floating-ui.core.umd.js: { minified: true }
+    js/navigation/vendor/floating-ui/floating-ui.dom.umd.js: { minified: true }
+    js/navigation/sidebar.js: { minified: false }
+  dependencies:
+  - gin/coffee
+  - gin/node_preview
+  - gin/responsive_preview
+  - gin/contextual_links
+  - gin/settings_tray
+  - gin/settings_tray_edit
+  - core/drupalSettings
+  - core/once
+  - core/drupal.displace
+
 gin_toolbar:
   css:
     component:
@@ -41,7 +63,6 @@ gin_toolbar:
     - gin/node_preview
     - gin/responsive_preview
     - gin/contextual_links
-    - gin/breadcrumb
     - gin/settings_tray
     - gin/settings_tray_edit
     - core/drupalSettings
@@ -62,7 +83,6 @@ gin_horizontal_toolbar:
     - gin/node_preview
     - gin/responsive_preview
     - gin/contextual_links
-    - gin/breadcrumb
     - gin/settings_tray
     - gin/settings_tray_edit
     - core/once
@@ -79,7 +99,6 @@ gin_classic_toolbar:
     - gin/coffee
     - gin/node_preview
     - gin/contextual_links
-    - gin/breadcrumb
     - gin/settings_tray_edit
     - core/once
 
@@ -162,6 +181,10 @@ tableselect:
     component:
       dist/css/components/tableselect.css: { minified: false }
 
+tableheader:
+  js:
+    dist/js/tableheader.js: { minified: false }
+
 tabs:
   css:
     component:
@@ -173,6 +196,8 @@ edit_form:
   css:
     layout:
       dist/css/components/edit_form.css: { minified: false }
+  dependencies:
+    - core/once
 
 media_library:
   css:
@@ -251,11 +276,6 @@ paragraphs:
     component:
       dist/css/components/paragraphs.css: { minified: false }
 
-paragraphs_ee:
-  css:
-    component:
-      dist/css/components/paragraphs_ee.css: { minified: false }
-
 layout_paragraphs:
   css:
     component:
@@ -332,3 +352,8 @@ legacy_css:
   css:
     theme:
       dist/css/theme/legacy.css: { minified: false }
+
+workspaces:
+  css:
+    component:
+      dist/css/components/workspaces.css: { minified: false }

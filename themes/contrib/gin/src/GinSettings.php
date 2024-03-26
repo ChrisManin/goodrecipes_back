@@ -7,7 +7,6 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\user\UserDataInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -27,7 +26,7 @@ class GinSettings implements ContainerInjectionInterface {
   /**
    * The user data service.
    *
-   * @var \Drupal\user\UserDataInterface
+   * @var \Drupal\user\UserDataInterface|null
    */
   protected $userData;
 
@@ -41,15 +40,15 @@ class GinSettings implements ContainerInjectionInterface {
   /**
    * Settings constructor.
    *
-   * @param \Drupal\user\UserDataInterface $userData
-   *   The user data service.
    * @param \Drupal\Core\Session\AccountInterface $currentUser
    *   The current user.
    * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
    *   The config factory.
    */
-  public function __construct(UserDataInterface $userData, AccountInterface $currentUser, ConfigFactoryInterface $configFactory) {
-    $this->userData = $userData;
+  public function __construct(AccountInterface $currentUser, ConfigFactoryInterface $configFactory) {
+    if (\Drupal::hasService('user.data')) {
+      $this->userData = \Drupal::service('user.data');
+    }
     $this->currentUser = $currentUser;
     $this->configFactory = $configFactory;
   }
@@ -59,7 +58,6 @@ class GinSettings implements ContainerInjectionInterface {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('user.data'),
       $container->get('current_user'),
       $container->get('config.factory')
     );
@@ -121,7 +119,7 @@ class GinSettings implements ContainerInjectionInterface {
    *   The account object. Current user if NULL.
    */
   public function setAll(array $settings, AccountInterface $account = NULL) {
-    if (!$account) {
+    if (!$account || !$this->userData) {
       $account = $this->currentUser;
     }
     // All settings are deleted to remove legacy settings.
@@ -137,7 +135,7 @@ class GinSettings implements ContainerInjectionInterface {
    *   The account object. Current user if NULL.
    */
   public function clear(AccountInterface $account = NULL) {
-    if (!$account) {
+    if (!$account || !$this->userData) {
       $account = $this->currentUser;
     }
     $this->userData->delete('gin', $account->id());
@@ -164,7 +162,7 @@ class GinSettings implements ContainerInjectionInterface {
    *   TRUE or FALSE.
    */
   public function userOverrideEnabled(AccountInterface $account = NULL) {
-    if (!$account) {
+    if (!$account || !$this->userData) {
       $account = $this->currentUser;
     }
     return $this->allowUserOverrides() && (bool) $this->userData->get('gin', $account->id(), 'enable_user_settings');
@@ -275,8 +273,9 @@ class GinSettings implements ContainerInjectionInterface {
    *   The theme setting form elements.
    */
   public function getSettingsForm(AccountInterface $account = NULL): array {
-    $experimental_label = ' (EXPERIMENTAL)';
-    $beta_label = ' (BETA)';
+    $experimental_label = ' <span class="gin-experimental-flag">Experimental</span>';
+    $beta_label = ' <span class="gin-beta-flag">Beta</span>';
+    $new_label = ' <span class="gin-new-flag">New</span>';
 
     $form['enable_darkmode'] = [
       '#type' => 'radios',
@@ -423,6 +422,7 @@ class GinSettings implements ContainerInjectionInterface {
         'vertical' => $this->t('Sidebar, Vertical Toolbar (Default)'),
         'horizontal' => $this->t('Horizontal, Modern Toolbar'),
         'classic' => $this->t('Legacy, Classic Drupal Toolbar'),
+        'new' => $this->t('New Drupal Navigation, Test integration') . $new_label . $experimental_label,
       ],
       '#after_build' => [
         '_gin_toolbar_radios',
