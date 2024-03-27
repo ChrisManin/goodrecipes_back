@@ -69,6 +69,7 @@
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
         "drupal/readonly_field_widget": "^1.5",
+        "drupal/recipe": "^2.1",
         "drupal/redirect": "^1.8",
         "drupal/rest_menu_items": "^3.0",
         "drupal/restui": "^1.21",
