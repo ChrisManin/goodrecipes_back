@@ -7,7 +7,8 @@
 .ui-dialog [open] .claro-details__summary--vertical-tabs-item,
 .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
   color: var(--gin-color-primary);
-  text-decoration: none;
+  -webkit-text-decoration-style: var(--gin-link-decoration-style);
+          text-decoration-style: var(--gin-link-decoration-style);
 }
 
 .ui-dialog a:hover,
@@ -30,6 +31,18 @@
 .ui-dialog [open] .claro-details__summary--vertical-tabs-item:active,
 .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active {
   color: var(--gin-color-primary-active);
+}
+
+.ui-dialog *|*:-webkit-any-link:not(svg|a) {
+  text-decoration: underline;
+  -webkit-text-decoration-style: var(--gin-link-decoration-style);
+          text-decoration-style: var(--gin-link-decoration-style);
+}
+
+.ui-dialog *|*:any-link:not(svg|a) {
+  text-decoration: underline;
+  -webkit-text-decoration-style: var(--gin-link-decoration-style);
+          text-decoration-style: var(--gin-link-decoration-style);
 }
 
 .ui-dialog .is-horizontal .tabs__link:hover,
@@ -131,7 +144,8 @@
 .ui-dialog .button:not(:focus),
 .ui-dialog .form-actions .button,
 .ui-dialog .action-link--icon-trash.action-link {
-  padding: calc(var(--gin-spacing-m) - 2px) calc(var(--gin-spacing-l) - 2px);
+  font-size: var(--gin-font-size-s);
+  padding: calc(var(--gin-spacing-s) - 2px) var(--gin-spacing-m);
   border: 2px solid var(--gin-color-primary) !important;
   border-radius: var(--gin-border-m);
   box-shadow: 0 1px 2px var(--gin-color-primary-light);
@@ -259,8 +273,8 @@
 }
 
 .ui-dialog .action-link.action-link--icon-trash {
-  min-height: 48px;
-  padding: calc(var(--gin-spacing-s) - 1px) calc(var(--gin-spacing-l) - 2px);
+  line-height: 1;
+  min-height: 2.5rem;
   box-sizing: border-box;
 }
 
@@ -282,6 +296,9 @@
 
 .ui-dialog .form-element {
   color: var(--gin-color-text);
+  line-height: var(--input-line-height);
+  padding: calc(var(--input-padding-vertical) - 1px) var(--input-padding-horizontal);
+  min-height: calc(var(--input-padding-vertical) * 2 + var(--input-line-height));
   background-color: var(--gin-bg-input);
   border: 1px solid var(--gin-border-color-form-element);
   border-radius: var(--gin-border-m);
@@ -337,7 +354,7 @@
 
 .ui-dialog .password-confirm {
   width: 100%;
-  max-width: 520px;
+  max-width: var(--gin-max-line-length);
 }
 
 .ui-dialog .password-strength__title {
@@ -409,19 +426,19 @@
   background-color: var(--gin-color-primary-active);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
   position: relative;
 }
 
-[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
   margin-left: 0;
 }
 
-[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
   margin-right: 0;
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle {
   z-index: 0;
   display: inline-block;
   vertical-align: top;
@@ -431,7 +448,7 @@
   box-sizing: border-box;
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner {
   position: relative;
   display: block;
   width: 100%;
@@ -445,11 +462,11 @@
   box-sizing: border-box;
 }
 
-.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner {
+.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner {
   background-color: var(--gin-bg-input);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -459,19 +476,19 @@
   transition: transform .3s;
 }
 
-[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
   transform: translateX(-16px);
 }
 
-[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
   transform: translateX(16px);
 }
 
-.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
   background-color: var(--gin-border-color-form-element);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
@@ -486,91 +503,99 @@
   z-index: 1;
 }
 
-[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
   margin-left: 0;
 }
 
-[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
   margin-right: 0;
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover:focus, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active:focus {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover:focus, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active:focus {
   outline: none;
   box-shadow: none;
   border: none;
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover ~ .checkbox-toggle {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover ~ .checkbox-toggle {
   opacity: .9;
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle {
   border-color: var(--gin-color-primary-light-active);
 }
 
-.gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle {
+.gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle {
   border-color: var(--gin-border-color);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner {
   background-color: var(--gin-switch);
 }
 
-.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner {
+.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner {
   background-color: var(--gin-color-primary-light-active);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
   background-color: #fff;
 }
 
-[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
   transform: translateX(16px);
 }
 
-[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
   transform: translateX(-16px);
 }
 
-.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+.gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
   background-color: var(--gin-color-primary-hover);
 }
 
-.gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+.gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
   background-color: var(--gin-border-color);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active ~ .checkbox-toggle .checkbox-toggle__inner, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus ~ .checkbox-toggle .checkbox-toggle__inner {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active ~ .checkbox-toggle .checkbox-toggle__inner, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus ~ .checkbox-toggle .checkbox-toggle__inner {
   box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled {
   cursor: not-allowed;
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner {
   background-color: var(--gin-color-disabled);
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle::before, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover::before, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner::before, .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner::before {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle::before, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover::before, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner::before, .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner::before {
   background-color: #fff;
   opacity: .4;
 }
 
-.ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
+.ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
   z-index: 1;
   position: relative;
   padding-bottom: 0;
   color: var(--gin-color-text);
 }
 
-[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
+[dir="ltr"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
   padding-left: var(--gin-spacing-xxs);
 }
 
-[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
+[dir="rtl"] .ui-dialog :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
   padding-right: var(--gin-spacing-xxs);
+}
+
+[dir="ltr"] .ui-dialog table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox {
+  margin-left: calc(var(--tabledrag-handle-icon-size, 1.0625rem) + var(--gin-spacing-m));
+}
+
+[dir="rtl"] .ui-dialog table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox {
+  margin-right: calc(var(--tabledrag-handle-icon-size, 1.0625rem) + var(--gin-spacing-m));
 }
 
 .gin--dark-mode .ui-dialog .form-boolean:hover, .gin--dark-mode .ui-dialog .form-boolean:active {
@@ -688,7 +713,7 @@
 
 .ui-dialog .form-item__description,
 .ui-dialog .fieldset__description {
-  max-width: 520px;
+  max-width: var(--gin-max-line-length);
   color: var(--gin-color-text-light);
 }
 
@@ -817,5 +842,9 @@
 .ui-dialog .field-plugin-settings-edit-form .form-boolean-group .form-item {
   margin-top: var(--gin-spacing-xs);
   margin-bottom: var(--gin-spacing-xs);
+}
+
+.ui-dialog .length-indicator {
+  margin-bottom: var(--gin-spacing-l);
 }
 

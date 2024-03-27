@@ -1,15 +1,15 @@
 // Toolbar Variables
 :root {
-  --gin-toolbar-secondary-height: 48px;
   --gin-toolbar-height: 39px;
+  --gin-toolbar-secondary-height: 48px;
   --gin-scroll-offset: 72px;
   --gin-toolbar-y-offset: var(--gin-toolbar-height);
   --gin-toolbar-x-offset: 0px; // Needs px to work in calc() functions.
   --gin-sticky-offset: 0px; // Needs px to work in calc() functions.
 
   @include mq(medium) {
-    --gin-toolbar-secondary-height: 60px;
     --gin-toolbar-height: 53px;
+    --gin-toolbar-secondary-height: 60px;
     --gin-scroll-offset: 180px;
     --gin-icon-size-toolbar: 18px;
     --gin-sticky-offset: var(--gin-height-sticky);
@@ -23,6 +23,9 @@
 // Toolbar
 .toolbar {
   .toolbar-bar {
+    position: fixed;
+    left: 0;
+    width: 100%;
     background: #100f10;
     box-shadow: none;
 
@@ -42,9 +45,13 @@
           > .toolbar-box > .toolbar-icon:not(.toolbar-handle) {
             padding-top: 20px;
             padding-bottom: 20px;
-            padding-left: 3em;
-            padding-right: 2.25em;
+            padding-left: 3.25em;
+            padding-right: 1.25em;
             white-space: nowrap;
+
+            &::before {
+              inset-inline-start: 1em;
+            }
           }
 
           > .toolbar-box > .toolbar-icon:not(.toolbar-handle)::before {
@@ -104,6 +111,7 @@
 .toolbar .toolbar-tray a.is-active {
   color: var(--gin-color-primary);
   font-weight: var(--gin-font-weight-bold);
+  background-color: transparent;
 
   &::before {
     background: var(--gin-color-primary);
@@ -249,9 +257,16 @@
       }
     }
 
+    // Hover
     .menu-item .menu-item:hover > .toolbar-icon {
       color: var(--gin-color-primary-hover);
       background: var(--gin-color-primary-light);
+    }
+
+    // Active
+    .menu-item> .toolbar-icon.is-active {
+      color: var(--gin-color-primary-active);
+      background: var(--gin-bg-item-hover);
     }
   }
 }
@@ -265,4 +280,10 @@
   .gin--dark-mode & {
     box-shadow: 0 0 4px rgba(0, 0, 0, .3);
   }
+}
+
+// Classes that hide submenus are not available until the toolbar has
+// initialized, so hide them until loading is complete.
+.toolbar-loading .menu-item--expanded > .toolbar-menu {
+  display: none;
 }
