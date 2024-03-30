@@ -1,0 +1,41 @@
+uuid: d4cce321-bd31-4ae2-9c29-eb69a1da04ae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.intermediate_html
+  module:
+    - ckeditor5
+format: intermediate_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - underline
+      - removeFormat
+      - heading
+      - undo
+      - redo
+      - sourceEditing
+      - alignment
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    media_media:
+      allow_view_mode_override: false
+image_upload: {  }
