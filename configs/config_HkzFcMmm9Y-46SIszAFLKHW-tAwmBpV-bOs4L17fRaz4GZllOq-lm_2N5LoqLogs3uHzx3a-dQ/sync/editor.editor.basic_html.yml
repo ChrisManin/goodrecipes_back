@@ -18,10 +18,7 @@ settings:
       - underline
       - '|'
       - link
-  plugins:
-    editor_advanced_link_link:
-      enabled_attributes:
-        - target
+  plugins: {  }
 image_upload:
   status: true
   scheme: public
