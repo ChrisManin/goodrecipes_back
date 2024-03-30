@@ -1,0 +1,22 @@
+uuid: 797a0047-4412-4e06-a6b0-8f6c0cea19f0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: dish_type_alias
+label: 'alias des types de plat'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  1da9ec70-83e0-4f9c-93fb-b90a14f01d26:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 1da9ec70-83e0-4f9c-93fb-b90a14f01d26
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      dish_type: dish_type
+selection_logic: and
+weight: -5
+relationships: {  }
