@@ -88,6 +88,8 @@ regions_hidden:
 ckeditor_stylesheets:
   - css/classy/components/media-embed-error.css
 
+ckeditor5-stylesheets: false
+
 # Information added by Drupal.org packaging script on 2023-05-09
 version: '1.0.0'
 project: 'seven'
