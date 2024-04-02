@@ -1,0 +1,7 @@
+name: 'Quantity field'
+type: module
+description: 'Fourni un champ personnalisé de quantité pour un ingrédient'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - drupal:field
