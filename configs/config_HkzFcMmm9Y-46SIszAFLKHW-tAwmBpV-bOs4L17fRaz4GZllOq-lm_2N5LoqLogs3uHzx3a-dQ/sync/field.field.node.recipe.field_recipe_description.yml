@@ -1,0 +1,24 @@
+uuid: 1bf0e217-2f30-491b-b8cf-66ff01582f03
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_description
+    - filter.format.basic_html
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.field_recipe_description
+field_name: field_recipe_description
+entity_type: node
+bundle: recipe
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

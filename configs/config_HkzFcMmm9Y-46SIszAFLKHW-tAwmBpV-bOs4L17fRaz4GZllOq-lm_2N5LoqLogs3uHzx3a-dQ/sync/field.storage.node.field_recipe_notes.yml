@@ -1,0 +1,19 @@
+uuid: 4f7af5de-a686-4f7d-935d-acffba712c80
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_recipe_notes
+field_name: field_recipe_notes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
