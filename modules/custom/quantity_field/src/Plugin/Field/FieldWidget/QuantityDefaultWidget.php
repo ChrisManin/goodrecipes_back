@@ -32,25 +32,36 @@ class QuantityDefaultWidget extends WidgetBase {
    * @return array
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    $element['quantity'] = [
+    $element['container'] = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['quantity-default-widget']],
+    ];
+
+    $element['container']['quantity'] = [
       '#type' => 'number',
-      '#title' => t('Quantity'),
+      '#title' => t('Quantité'),
       '#default_value' => isset($items[$delta]->quantity) ? $items[$delta]->quantity : NULL,
       '#min' => 0, // Adjust as needed.
       '#max' => 10000, // Adjust as needed.
       '#step' => 1,
       '#size' => 4,
       '#required' => FALSE,
+      '#prefix' => '<div class="quantity-field">',
+      '#suffix' => '</div>',
     ];
 
-    $element['unit'] = [
+    $element['container']['unit'] = [
       '#type' => 'select',
-      '#title' => t('Unit'),
+      '#title' => t('Unité de mesure'),
       '#default_value' => isset($items[$delta]->unit) ? $items[$delta]->unit : '',
       '#options' => $this->getUnitOptions(),
       '#required' => FALSE,
+      '#prefix' => '<div class="unit-field">',
+      '#suffix' => '</div>',
     ];
 
+    $element['#attached']['library'][] = 'core/drupal.dialog.ajax';
+    // dd($element);
     return $element;
   }
 
@@ -62,10 +73,9 @@ class QuantityDefaultWidget extends WidgetBase {
   protected function getUnitOptions() {
     $options = [];
     // Load the taxonomy vocabulary containing units.
-    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['vid' => 'unit']);
+    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['vid' => 'measurement']);
     foreach ($terms as $term) {
-      dd($term);
-      $options[$term->id()] = $term->get('field_measurement_abbreviation');
+      $options[$term->id()] = $term->get('field_measurement_abbreviation')->value;
     }
     return $options;
   }

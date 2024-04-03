@@ -1,0 +1,32 @@
+uuid: f443c6e2-d68f-4a55-8743-08f855aceab3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Ingrédient
+type: ingredient
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true
