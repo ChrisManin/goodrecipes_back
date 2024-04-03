@@ -1,0 +1,21 @@
+uuid: 31d6c813-b128-496a-bf2c-0e0fe996d017
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingredient_optional
+    - node.type.ingredient
+id: node.ingredient.field_ingredient_optional
+field_name: field_ingredient_optional
+entity_type: node
+bundle: ingredient
+label: Facultatif
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Facultatif
+  off_label: ' ras'
+field_type: boolean

@@ -1,0 +1,58 @@
+uuid: 394b2641-aed1-4944-a33d-8a2d4c60cbda
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.ingredient.field_ingredient_optional
+    - field.field.node.ingredient.field_ingredient_quantity
+    - field.field.node.ingredient.field_ingredient_visual
+    - image.style.thumbnail
+    - node.type.ingredient
+  module:
+    - image
+    - quantity_field
+id: node.ingredient.default
+targetEntityType: node
+bundle: ingredient
+mode: default
+content:
+  field_ingredient_optional:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ingredient_quantity:
+    type: quantity_default_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ingredient_visual:
+    type: image_image
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  publish_on: true
+  status: true
+  sticky: true
+  uid: true
+  unpublish_on: true
+  url_redirects: true
