@@ -1,0 +1,29 @@
+uuid: 1301e6c6-fd24-40fd-b839-508515f61907
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_para_ingredient
+    - node.type.ingredient
+    - paragraphs.paragraphs_type.ingredient_paragraph
+id: paragraph.ingredient_paragraph.field_ingredient_para_ingredient
+field_name: field_ingredient_para_ingredient
+entity_type: paragraph
+bundle: ingredient_paragraph
+label: Ingredient
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ingredient: ingredient
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

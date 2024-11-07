@@ -1,0 +1,34 @@
+uuid: 4c8787e4-b18d-4c80-84d2-cf748453acd5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ingredient_paragraph.field_ingredient_para_ingredient
+    - field.field.paragraph.ingredient_paragraph.field_ingredient_para_quantity
+    - paragraphs.paragraphs_type.ingredient_paragraph
+  module:
+    - quantity_field
+id: paragraph.ingredient_paragraph.default
+targetEntityType: paragraph
+bundle: ingredient_paragraph
+mode: default
+content:
+  field_ingredient_para_ingredient:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ingredient_para_quantity:
+    type: quantity_default_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

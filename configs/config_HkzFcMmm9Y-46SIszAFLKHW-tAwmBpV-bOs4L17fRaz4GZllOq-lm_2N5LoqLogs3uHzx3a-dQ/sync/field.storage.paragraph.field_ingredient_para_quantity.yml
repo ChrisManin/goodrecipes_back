@@ -1,0 +1,19 @@
+uuid: c5b7fe5e-f05d-4329-8230-f1a8ab8f5a41
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - quantity_field
+id: paragraph.field_ingredient_para_quantity
+field_name: field_ingredient_para_quantity
+entity_type: paragraph
+type: quantity_field_type
+settings: {  }
+module: quantity_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: e07597ac-eda9-433b-8208-e1c3ab867022
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_para_quantity
+    - paragraphs.paragraphs_type.ingredient_paragraph
+  module:
+    - quantity_field
+id: paragraph.ingredient_paragraph.field_ingredient_para_quantity
+field_name: field_ingredient_para_quantity
+entity_type: paragraph
+bundle: ingredient_paragraph
+label: Quantité
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: quantity_field_type
