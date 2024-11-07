@@ -1,0 +1,23 @@
+uuid: 59773428-c51f-4542-af86-777be1618c2f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_servings
+    - node.type.recipe
+id: node.recipe.field_recipe_servings
+field_name: field_recipe_servings
+entity_type: node
+bundle: recipe
+label: Portions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

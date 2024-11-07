@@ -1,0 +1,19 @@
+uuid: ee3b966e-92d5-45a3-af7d-805fe8d3fbbc
+langcode: fr
+status: true
+dependencies:
+  module:
+    - duration_field
+    - node
+id: node.field_recipe_cooking_duration
+field_name: field_recipe_cooking_duration
+entity_type: node
+type: duration
+settings: {  }
+module: duration_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
