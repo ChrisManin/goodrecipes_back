@@ -188,6 +188,11 @@ html.js .dropbutton-widget {
     border-radius: var(--gin-border-s);
   }
 
+  // Shadow for pseudo dropdown on views page
+  &:not(.dropbutton--gin) > .dropbutton__item.secondary-action {
+    box-shadow: var(--gin-shadow-l2);
+  }
+
   &:not(.dropbutton--gin) > .dropbutton__item:not(:first-of-type),
   & &__items > .dropbutton__item,
   & > &__items > .dropbutton__item ~ .dropbutton__item {
@@ -201,6 +206,7 @@ html.js .dropbutton-widget {
 
   &__item:first-of-type ~ .dropbutton__item {
     max-width: unset;
+    border-color: var(--gin-color-primary);
 
     & > *:hover {
       background-color: var(--gin-bg-layer3);
@@ -217,6 +223,16 @@ html.js {
     height: 3rem;
     min-height: 3rem;
     box-sizing: border-box;
+  }
+
+  .dropbutton-wrapper:not(.open) .dropbutton__items {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .dropbutton-wrapper .dropbutton__items {
+    visibility: visible;
+    opacity: 1;
   }
 
   .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type ~ .dropbutton__items {
@@ -271,10 +287,4 @@ html.js.no-touchevents {
   .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item {
     margin-right: 0;
   }
-}
-
-// Last item in table
-table tr:not(:first-of-type):nth-last-child(2) td .dropbutton__items,
-table tr:not(:first-of-type):last-of-type td .dropbutton__items {
-  bottom: 100%;
 }
