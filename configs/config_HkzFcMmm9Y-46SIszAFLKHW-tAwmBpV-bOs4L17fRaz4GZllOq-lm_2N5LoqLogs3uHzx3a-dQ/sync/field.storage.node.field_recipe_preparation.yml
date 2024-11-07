@@ -1,0 +1,19 @@
+uuid: 73d3e1e5-982c-401d-80e9-cf34c8893412
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_recipe_preparation
+field_name: field_recipe_preparation
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

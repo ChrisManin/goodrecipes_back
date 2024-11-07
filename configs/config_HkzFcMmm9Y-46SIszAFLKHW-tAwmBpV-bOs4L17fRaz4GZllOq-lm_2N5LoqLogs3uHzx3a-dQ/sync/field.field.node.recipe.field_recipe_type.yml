@@ -1,0 +1,29 @@
+uuid: 6c02322d-81d9-47ae-ad4f-b7af2f1a0767
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_type
+    - node.type.recipe
+    - taxonomy.vocabulary.dish_type
+id: node.recipe.field_recipe_type
+field_name: field_recipe_type
+entity_type: node
+bundle: recipe
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      dish_type: dish_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

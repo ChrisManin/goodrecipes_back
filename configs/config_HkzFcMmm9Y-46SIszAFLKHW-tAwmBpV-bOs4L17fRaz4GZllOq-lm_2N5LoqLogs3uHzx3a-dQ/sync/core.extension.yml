@@ -1,6 +1,5 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
-langcode: fr
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
@@ -22,10 +21,13 @@ module:
   crop: 0
   datetime: 0
   dblog: 0
+  duration_field: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
   field: 0
+  field_group: 0
+  field_group_table: 0
   field_ui: 0
   file: 0
   file_mdm: 0
@@ -41,6 +43,7 @@ module:
   link: 0
   locale: 0
   media: 0
+  media_library: 0
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
@@ -53,6 +56,7 @@ module:
   path_alias: 0
   quantity_field: 0
   redirect: 0
+  responsive_image: 0
   rest: 0
   rest_menu_items: 0
   scheduler: 0

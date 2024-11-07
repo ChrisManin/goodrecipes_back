@@ -1,14 +1,16 @@
-uuid: cf377175-db3e-4ec3-981c-745349cd1128
+uuid: 8cfd1d78-c4c2-4f2c-9e6f-57194a0454a2
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-id: node.field_ingredient_optional
-field_name: field_ingredient_optional
+    - taxonomy
+id: node.field_recipe_difficulty
+field_name: field_recipe_difficulty
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

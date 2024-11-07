@@ -1,0 +1,24 @@
+uuid: ae249bb7-b638-419b-a2d6-585ee9a1ba22
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_notes
+    - filter.format.basic_html
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.field_recipe_notes
+field_name: field_recipe_notes
+entity_type: node
+bundle: recipe
+label: Notes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

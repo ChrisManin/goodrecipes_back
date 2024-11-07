@@ -1,0 +1,19 @@
+uuid: 18f89a4d-6244-41f3-b3dc-a5a38007db4b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_source
+    - node.type.recipe
+id: node.recipe.field_recipe_source
+field_name: field_recipe_source
+entity_type: node
+bundle: recipe
+label: Source
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

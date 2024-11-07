@@ -1,0 +1,23 @@
+uuid: 767df7b9-5675-4602-a73e-cabb60efeca2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_caloric_intake
+    - node.type.recipe
+id: node.recipe.field_recipe_caloric_intake
+field_name: field_recipe_caloric_intake
+entity_type: node
+bundle: recipe
+label: 'Apport calorique'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: Kcal
+field_type: integer

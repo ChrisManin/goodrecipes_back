@@ -1,0 +1,22 @@
+uuid: c0259e80-047f-4e91-9260-fd5a2f022b64
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_cooking_duration
+    - node.type.recipe
+  module:
+    - duration_field
+id: node.recipe.field_recipe_cooking_duration
+field_name: field_recipe_cooking_duration
+entity_type: node
+bundle: recipe
+label: 'Temps de cuisson'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  granularity: 'h:i'
+field_type: duration

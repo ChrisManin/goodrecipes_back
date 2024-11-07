@@ -1,0 +1,22 @@
+uuid: 8dd82856-4c49-46f5-8681-6f893d50eb0f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_prepare_duration
+    - node.type.recipe
+  module:
+    - duration_field
+id: node.recipe.field_recipe_prepare_duration
+field_name: field_recipe_prepare_duration
+entity_type: node
+bundle: recipe
+label: 'Temps de préparation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  granularity: 'h:i'
+field_type: duration
