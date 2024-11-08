@@ -1,0 +1,32 @@
+uuid: 556ff92c-022f-4ab3-afd8-b6b46b44bb91
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Plan de nutrition'
+type: nutrition_plan
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true
