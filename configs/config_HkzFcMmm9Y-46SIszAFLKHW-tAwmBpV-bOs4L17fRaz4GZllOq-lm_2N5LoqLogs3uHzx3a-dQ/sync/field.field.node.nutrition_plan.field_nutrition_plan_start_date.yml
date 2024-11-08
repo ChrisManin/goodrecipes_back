@@ -1,0 +1,21 @@
+uuid: e2f4812f-c44b-4f19-a6d3-c82086cdb01f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nutrition_plan_start_date
+    - node.type.nutrition_plan
+  module:
+    - datetime
+id: node.nutrition_plan.field_nutrition_plan_start_date
+field_name: field_nutrition_plan_start_date
+entity_type: node
+bundle: nutrition_plan
+label: 'Date de début'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

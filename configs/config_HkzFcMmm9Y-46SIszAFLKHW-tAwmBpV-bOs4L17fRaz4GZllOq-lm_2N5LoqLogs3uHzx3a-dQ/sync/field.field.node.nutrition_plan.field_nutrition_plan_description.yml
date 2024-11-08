@@ -1,0 +1,24 @@
+uuid: 18e4c516-40df-46e8-9e00-afc6c0fe2709
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nutrition_plan_description
+    - filter.format.basic_html
+    - node.type.nutrition_plan
+  module:
+    - text
+id: node.nutrition_plan.field_nutrition_plan_description
+field_name: field_nutrition_plan_description
+entity_type: node
+bundle: nutrition_plan
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: bd0bd74a-1a54-480b-9771-8bf75dd521c5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_nutrition_plan_visual
+field_name: field_nutrition_plan_visual
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

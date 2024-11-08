@@ -1,0 +1,29 @@
+uuid: 0be1d44c-5eb7-459e-b28c-f112cec45244
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nutrition_plan_meals
+    - node.type.meal
+    - node.type.nutrition_plan
+id: node.nutrition_plan.field_nutrition_plan_meals
+field_name: field_nutrition_plan_meals
+entity_type: node
+bundle: nutrition_plan
+label: Repas
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      meal: meal
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

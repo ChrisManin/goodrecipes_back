@@ -1,0 +1,21 @@
+uuid: 8898071e-46a2-492d-a309-d17efe4d754e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nutrition_plan_end_date
+    - node.type.nutrition_plan
+  module:
+    - datetime
+id: node.nutrition_plan.field_nutrition_plan_end_date
+field_name: field_nutrition_plan_end_date
+entity_type: node
+bundle: nutrition_plan
+label: 'Date de fin'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
