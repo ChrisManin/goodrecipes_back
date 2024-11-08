@@ -1,0 +1,29 @@
+uuid: 23c6bd7f-e2af-48b3-8af0-a9880bf7ddf4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meal_starter
+    - node.type.meal
+    - node.type.recipe
+id: node.meal.field_meal_starter
+field_name: field_meal_starter
+entity_type: node
+bundle: meal
+label: Entrée
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      recipe: recipe
+    sort:
+      field: field_recipe_type
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

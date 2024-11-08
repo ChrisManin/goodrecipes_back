@@ -1,0 +1,24 @@
+uuid: 8fc4332f-7e2b-4149-b8a1-b51f279af2ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meal_description
+    - filter.format.basic_html
+    - node.type.meal
+  module:
+    - text
+id: node.meal.field_meal_description
+field_name: field_meal_description
+entity_type: node
+bundle: meal
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long
