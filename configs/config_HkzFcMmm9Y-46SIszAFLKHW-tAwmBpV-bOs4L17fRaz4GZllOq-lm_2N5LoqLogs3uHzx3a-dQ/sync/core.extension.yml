@@ -21,6 +21,7 @@ module:
   crop: 0
   datetime: 0
   dblog: 0
+  draggable_dashboard: 0
   duration_field: 0
   dynamic_page_cache: 0
   editor: 0
