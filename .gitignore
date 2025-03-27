@@ -20,7 +20,7 @@
 # Ignore drupal core (if not versioning drupal sources)
 /core
 /vendor
-/libraries/notification/lang/*
+/libraries/*
 /modules/contrib/*
 /modules/README.txt
 /profiles/README.txt
