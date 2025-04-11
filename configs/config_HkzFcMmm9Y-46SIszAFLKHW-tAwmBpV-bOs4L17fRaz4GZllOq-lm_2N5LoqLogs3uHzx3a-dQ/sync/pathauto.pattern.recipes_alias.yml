@@ -1,0 +1,22 @@
+uuid: eb868666-cf0c-4069-98d1-72fcc6b6d81a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: recipes_alias
+label: 'Alias des recettes'
+type: 'canonical_entities:node'
+pattern: '[node:field_recipe_type:entity:name]/[node:title]'
+selection_criteria:
+  0ac261dc-0923-482e-8f5c-b6d187142ff4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0ac261dc-0923-482e-8f5c-b6d187142ff4
+    context_mapping:
+      node: node
+    bundles:
+      recipe: recipe
+selection_logic: and
+weight: -5
+relationships: {  }

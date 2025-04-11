@@ -1,22 +1,22 @@
-uuid: 3e68e654-34d1-44c0-9419-be952ee87157
+uuid: 187bf4ad-86c2-4283-8929-c0c0572663c6
 langcode: fr
 status: true
 dependencies:
   module:
     - taxonomy
-id: difficulty_level_alias
-label: 'Alias des niveaux de difficulté'
+id: tags_alias
+label: 'Alias des tags'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'difficulte/[term:name]'
+pattern: 'tag/[term:name]'
 selection_criteria:
-  25d41cca-e743-4f77-9c78-2ac05c101e84:
+  12df972a-19c0-440d-9644-aa5e6fefefbe:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 25d41cca-e743-4f77-9c78-2ac05c101e84
+    uuid: 12df972a-19c0-440d-9644-aa5e6fefefbe
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
-      difficulty: difficulty
+      tags: tags
 selection_logic: and
 weight: -5
 relationships: {  }

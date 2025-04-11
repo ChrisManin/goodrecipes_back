@@ -1,0 +1,22 @@
+uuid: 71e86c26-bdd7-4872-af89-f465450c1d33
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: ingredients_alias
+label: 'Alias des ingrédients'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  48b0dcb7-2759-413b-a96d-ecd70b6caf3b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 48b0dcb7-2759-413b-a96d-ecd70b6caf3b
+    context_mapping:
+      node: node
+    bundles:
+      ingredient: ingredient
+selection_logic: and
+weight: -5
+relationships: {  }

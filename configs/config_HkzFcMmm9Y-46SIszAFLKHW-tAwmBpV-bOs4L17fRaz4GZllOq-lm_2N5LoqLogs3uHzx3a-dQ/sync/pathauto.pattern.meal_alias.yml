@@ -1,0 +1,22 @@
+uuid: 2db62a2e-994c-4227-89c2-54645ad4f79d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: meal_alias
+label: 'Alias des repas'
+type: 'canonical_entities:node'
+pattern: 'repas/[node:title]'
+selection_criteria:
+  df952e04-ea23-43ac-b4e2-57e977b3056c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: df952e04-ea23-43ac-b4e2-57e977b3056c
+    context_mapping:
+      node: node
+    bundles:
+      meal: meal
+selection_logic: and
+weight: -5
+relationships: {  }
