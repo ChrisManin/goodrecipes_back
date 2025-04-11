@@ -1,22 +1,22 @@
-uuid: 3e68e654-34d1-44c0-9419-be952ee87157
+uuid: 584acfd6-19be-4744-a2dd-c86ffde3aa0f
 langcode: fr
 status: true
 dependencies:
   module:
     - taxonomy
-id: difficulty_level_alias
-label: 'Alias des niveaux de difficulté'
+id: season_alias
+label: 'Alias des saisons'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'difficulte/[term:name]'
+pattern: 'saison/[term:name]'
 selection_criteria:
-  25d41cca-e743-4f77-9c78-2ac05c101e84:
+  5056c5df-3da9-4172-89bc-ddce38138bb5:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 25d41cca-e743-4f77-9c78-2ac05c101e84
+    uuid: 5056c5df-3da9-4172-89bc-ddce38138bb5
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
-      difficulty: difficulty
+      season: season
 selection_logic: and
 weight: -5
 relationships: {  }

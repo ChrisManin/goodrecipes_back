@@ -1,0 +1,22 @@
+uuid: 4315d023-3099-4312-9e79-38436cf0d612
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: plans_alias
+label: 'Alias des plans de nutrition'
+type: 'canonical_entities:node'
+pattern: 'plans/[node:title]'
+selection_criteria:
+  0c6f835e-2d98-4d60-9929-f34b77062551:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0c6f835e-2d98-4d60-9929-f34b77062551
+    context_mapping:
+      node: node
+    bundles:
+      nutrition_plan: nutrition_plan
+selection_logic: and
+weight: -5
+relationships: {  }
