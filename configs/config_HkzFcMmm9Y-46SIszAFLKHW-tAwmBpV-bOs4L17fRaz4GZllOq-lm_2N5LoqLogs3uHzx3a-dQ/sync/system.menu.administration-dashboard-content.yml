@@ -1,0 +1,8 @@
+uuid: c82dee3f-0bcc-446c-8987-797bbb578d4c
+langcode: fr
+status: true
+dependencies: {  }
+id: administration-dashboard-content
+label: "Tableau de bord d'administration de contenus"
+description: ''
+locked: false

@@ -1,0 +1,31 @@
+uuid: b89ed120-8e10-435d-be87-e2662b15679d
+langcode: fr
+status: true
+dependencies: {  }
+id: administration
+title: Administration
+columns: 3
+blocks:
+  tableau_de_bord_d_administration_de_contenus:
+    settings:
+      id: 'system_menu_block:administration-dashboard-content'
+      label: 'Mes liens rapides de contenus'
+      label_display: visible
+      provider: system
+      level: 1
+      depth: 0
+      expand_all_items: false
+    column: '1'
+    weight: 0
+  admin_dashboard_taxonomy:
+    settings:
+      id: 'system_menu_block:admin-dashboard-taxo'
+      label: 'Mes liens rapides Vocabulaire'
+      label_display: visible
+      provider: system
+      level: 1
+      depth: 0
+      expand_all_items: false
+    column: '2'
+    weight: 0
+description: ''

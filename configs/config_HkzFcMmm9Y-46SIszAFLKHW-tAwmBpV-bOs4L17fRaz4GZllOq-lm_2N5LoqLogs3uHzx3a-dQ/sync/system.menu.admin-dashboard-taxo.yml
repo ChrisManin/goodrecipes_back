@@ -1,0 +1,8 @@
+uuid: c3fdf895-64c9-4400-81e7-94dc8880b7b4
+langcode: fr
+status: true
+dependencies: {  }
+id: admin-dashboard-taxo
+label: "Tableau de bord d'administration des taxonomies"
+description: ''
+locked: false
