@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.recipe.field_recipe_tags
     - field.field.node.recipe.field_recipe_type
     - field.field.node.recipe.field_recipe_visual
+    - field.field.node.recipe.field_season
     - node.type.recipe
   module:
     - duration_field
@@ -34,7 +35,7 @@ third_party_settings:
       label: 'Ingrédients et préparation'
       region: content
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tab
       format_settings:
         classes: ''
@@ -51,7 +52,7 @@ third_party_settings:
       label: 'Notes et source'
       region: content
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         classes: ''
@@ -68,7 +69,7 @@ third_party_settings:
       label: Timing
       region: content
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: tab
       format_settings:
         classes: ''
@@ -86,7 +87,7 @@ third_party_settings:
       label: Classification
       region: content
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: tab
       format_settings:
         classes: ''
@@ -103,13 +104,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 13
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_recipe_caloric_intake:
     type: number
-    weight: 6
+    weight: 7
     region: content
     settings:
       placeholder: ''
@@ -136,7 +137,7 @@ content:
     third_party_settings: {  }
   field_recipe_difficulty:
     type: options_select
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -176,7 +177,7 @@ content:
     third_party_settings: {  }
   field_recipe_servings:
     type: number
-    weight: 11
+    weight: 9
     region: content
     settings:
       placeholder: ''
@@ -212,21 +213,27 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_season:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp
-    weight: 16
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 13
     region: content
     settings:
       display_label: true

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.meal.field_meal_description
     - field.field.node.meal.field_meal_dessert
     - field.field.node.meal.field_meal_main_dish
+    - field.field.node.meal.field_meal_season
     - field.field.node.meal.field_meal_starter
     - field.field.node.meal.field_meal_visual
     - node.type.meal
@@ -42,7 +43,7 @@ third_party_settings:
       label: Plats
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: tab
       format_settings:
         classes: ''
@@ -59,7 +60,7 @@ mode: default
 content:
   field_meal_category:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -95,6 +96,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_meal_season:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_meal_starter:
     type: entity_reference_autocomplete
     weight: 3
@@ -114,19 +121,19 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 6
     region: content
     settings:
       display_label: true
@@ -141,7 +148,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
