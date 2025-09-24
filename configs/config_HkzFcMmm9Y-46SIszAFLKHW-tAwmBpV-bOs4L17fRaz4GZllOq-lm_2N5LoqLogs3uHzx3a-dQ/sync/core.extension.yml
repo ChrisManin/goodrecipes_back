@@ -19,6 +19,7 @@ module:
   content_moderation: 0
   contextual: 0
   crop: 0
+  csv_serialization: 0
   datetime: 0
   dblog: 0
   draggable_dashboard: 0
@@ -47,6 +48,7 @@ module:
   media_library: 0
   menu_link_attributes: 0
   menu_link_content: 0
+  menu_normalizer: 0
   menu_ui: 0
   mysql: 0
   node: 0
@@ -60,6 +62,8 @@ module:
   responsive_image: 0
   rest: 0
   rest_menu_items: 0
+  rest_menu_tree: 0
+  restui: 0
   scheduler: 0
   search: 0
   search_api: 0

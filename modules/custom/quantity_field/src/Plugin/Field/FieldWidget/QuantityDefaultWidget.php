@@ -32,36 +32,32 @@ class QuantityDefaultWidget extends WidgetBase {
    * @return array
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    $element['container'] = [
-      '#type' => 'container',
-      '#attributes' => ['class' => ['quantity-default-widget']],
+    $element['ingredient_id'] = [
+      '#type' => 'entity_autocomplete',
+      '#title' => t('Ingrédient'),
+      '#target_type' => 'node',
+      '#selection_handler' => 'default',
+      '#selection_settings' => ['target_bundles' => ['ingredient']],
+      '#default_value' => isset($items[$delta]->ingredient_id) ? \Drupal\node\Entity\Node::load($items[$delta]->ingredient_id) : NULL,
+      '#required' => FALSE,
     ];
 
-    $element['container']['quantity'] = [
+    $element['quantity'] = [
       '#type' => 'number',
       '#title' => t('Quantité'),
       '#default_value' => isset($items[$delta]->quantity) ? $items[$delta]->quantity : NULL,
-      '#min' => 0, // Adjust as needed.
-      '#max' => 10000, // Adjust as needed.
-      '#step' => 1,
-      '#size' => 4,
+      '#min' => 0,
       '#required' => FALSE,
-      '#prefix' => '<div class="quantity-field">',
-      '#suffix' => '</div>',
     ];
 
-    $element['container']['unit'] = [
+    $element['unit'] = [
       '#type' => 'select',
-      '#title' => t('Unité de mesure'),
-      '#default_value' => isset($items[$delta]->unit) ? $items[$delta]->unit : '',
+      '#title' => t('Unité'),
       '#options' => $this->getUnitOptions(),
+      '#default_value' => isset($items[$delta]->unit) ? $items[$delta]->unit : NULL,
       '#required' => FALSE,
-      '#prefix' => '<div class="unit-field">',
-      '#suffix' => '</div>',
     ];
 
-    $element['#attached']['library'][] = 'core/drupal.dialog.ajax';
-    // dd($element);
     return $element;
   }
 

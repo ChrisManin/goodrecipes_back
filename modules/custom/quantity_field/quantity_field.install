@@ -1,0 +1,51 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function quantity_field_schema() {
+  $schema['quantity_field_data'] = [
+    'description' => 'Stores quantity and unit data for ingredients in recipes.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'entity_id' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'entity_type' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'field_name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'ingredient_id' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'quantity' => [
+        'type' => 'int',
+        'not null' => FALSE,
+      ],
+      'unit' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'entity_field' => ['entity_id', 'entity_type', 'field_name'],
+      'ingredient_id' => ['ingredient_id'],
+    ],
+  ];
+  return $schema;
+}

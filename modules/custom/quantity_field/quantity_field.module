@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Database\Database;
 
 /**
  * Implements hook_theme().
@@ -20,4 +22,51 @@ function quantity_field_theme($existing, $type, $theme, $path) {
  */
 function quantity_field_form_field_ui_field_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form['#attached']['library'][] = 'quantity_field/quantity_field_css';
+}
+
+function quantity_field_entity_presave(EntityInterface $entity) {
+  // On ne traite que les nodes.
+  if ($entity->getEntityTypeId() !== 'node') {
+    return;
+  }
+
+  // On ne traite que les nodes de type "recette".
+  if ($entity->bundle() !== 'recette') {
+    return;
+  }
+
+  // On vérifie que le champ "field_ingredients" existe et a des valeurs.
+  if (!$entity->hasField('field_recipe_ingredients') || $entity->get('field_recipe_ingredients')->isEmpty()) {
+    return;
+  }
+
+  // On récupère les valeurs du champ "field_ingredients".
+  $ingredients = $entity->get('field_recipe_ingredients')->getValue();
+
+  // On supprime d'abord les anciennes entrées pour cette recette et ce champ.
+  // Cela permet de nettoyer les données avant de les réinsérer.
+  $connection = Database::getConnection();
+  $connection->delete('quantity_field_data')
+    ->condition('entity_id', $entity->id())
+    ->condition('entity_type', 'node')
+    ->condition('field_name', 'field_recipe_ingredients')
+    ->execute();
+
+  // On insère les nouvelles données pour chaque ingrédient.
+  foreach ($ingredients as $delta => $ingredient) {
+    try {
+      $connection->insert('quantity_field_data')
+        ->fields([
+          'entity_id' => $entity->id(),
+          'entity_type' => 'node',
+          'field_name' => 'field_recipe_ingredients',
+          'ingredient_id' => $ingredient['target_id'],
+          'quantity' => $ingredient['quantity'],
+          'unit' => $ingredient['unit'],
+        ])
+        ->execute();
+    } catch (\Exception $e) {
+      \Drupal::logger('quantity_field')->error('Erreur lors de l\'insertion des données : @error', ['@error' => $e->getMessage()]);
+    }
+  }
 }

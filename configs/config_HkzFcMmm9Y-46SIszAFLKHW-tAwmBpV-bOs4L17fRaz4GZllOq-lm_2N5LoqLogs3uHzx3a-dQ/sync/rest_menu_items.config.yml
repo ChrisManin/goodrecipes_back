@@ -1,20 +1,29 @@
 langcode: fr
 _core:
   default_config_hash: CPhyTxolwZkdB0flQ3_umqEOUAe1zmgc9Yc3HliOsQQ
-add_fragment: 1
+allowed_menus:
+  account: '0'
+  admin: '0'
+  admin-dashboard: '0'
+  admin-dashboard-taxo: '0'
+  administration-dashboard-content: '0'
+  footer: '0'
+  main: '0'
+  tools: '0'
+add_fragment: 0
 base_url: ''
 output_values:
-  key: key
-  title: title
-  description: description
-  uri: uri
-  alias: alias
-  external: external
-  absolute: absolute
-  relative: relative
-  existing: existing
-  weight: weight
-  expanded: expanded
-  enabled: enabled
-  uuid: uuid
-  options: options
+  key: '0'
+  title: '0'
+  description: '0'
+  uri: '0'
+  alias: '0'
+  external: '0'
+  absolute: '0'
+  relative: '0'
+  existing: '0'
+  weight: '0'
+  expanded: '0'
+  enabled: '0'
+  uuid: '0'
+  options: '0'
