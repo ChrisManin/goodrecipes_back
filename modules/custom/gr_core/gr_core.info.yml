@@ -1,0 +1,6 @@
+name: Good Recipes Core
+description: Module de fonctionnalités génériques Good Recipes
+type: module
+core_version_requirement: ^10
+version: '1.0'
+package: Good Recipes
