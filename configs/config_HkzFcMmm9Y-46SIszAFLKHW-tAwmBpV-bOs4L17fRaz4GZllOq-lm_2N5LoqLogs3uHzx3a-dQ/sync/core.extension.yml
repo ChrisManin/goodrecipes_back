@@ -35,6 +35,8 @@ module:
   file_mdm: 0
   filter: 0
   fontawesome: 0
+  gr_core: 0
+  gr_rest: 0
   help: 0
   history: 0
   image: 0

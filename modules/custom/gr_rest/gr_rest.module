@@ -1,0 +1,5 @@
+<?php
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Render\RenderContext;
