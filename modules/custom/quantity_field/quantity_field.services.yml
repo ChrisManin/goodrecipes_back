@@ -1,0 +1,17 @@
+# services:
+#   quantity_field.quantity_field_normalizer:
+#     class: Drupal\quantity_field\Normalizer\QuantityFieldNormalizer
+#     tags:
+#       - { name: normalizer, priority: 10 }
+#     arguments: ['@serialization.normalizer.field_item']
+
+#   quantity_field.duration_field_normalizer:
+#     class: Drupal\quantity_field\Normalizer\DurationFieldNormalizer
+#     tags:
+#       - { name: normalizer, priority: 10 }
+#     arguments: ['@serialization.normalizer.field_item']
+
+#   quantity_field.date_interval_data_normalizer:
+#     class: Drupal\quantity_field\Normalizer\DateIntervalDataNormalizer
+#     tags:
+#       - { name: normalizer, priority: 10 }

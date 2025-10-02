@@ -19,11 +19,17 @@ use Drupal\Core\TypedData\DataDefinition;
  */
 class QuantityFieldType extends FieldItemBase {
   public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+    $properties['ingredient_id'] = DataDefinition::create('integer')
+      ->setLabel(t('Ingredient ID'))
+      ->setRequired(TRUE);
+
     $properties['quantity'] = DataDefinition::create('integer')
-      ->setLabel(t('Quantity'));
+      ->setLabel(t('Quantity'))
+      ->setRequired(FALSE);
 
     $properties['unit'] = DataDefinition::create('string')
-      ->setLabel(t('Unit'));
+      ->setLabel(t('Unit'))
+      ->setRequired(FALSE);
 
     return $properties;
   }
@@ -31,22 +37,28 @@ class QuantityFieldType extends FieldItemBase {
   public static function schema(FieldStorageDefinitionInterface $field_definition) {
     return [
       'columns' => [
-        'quantity' => [
+        'ingredient_id' => [
           'type' => 'int',
           'not null' => TRUE,
+        ],
+        'quantity' => [
+          'type' => 'int',
+          'not null' => FALSE,
         ],
         'unit' => [
           'type' => 'varchar',
           'length' => 255,
-          'not null' => TRUE,
+          'not null' => FALSE,
         ],
+      ],
+      'indexes' => [
+        'ingredient_id' => ['ingredient_id'],
       ],
     ];
   }
 
   public function isEmpty() {
-    $quantity = $this->get('quantity')->getValue();
-    $unit = $this->get('unit')->getValue();
-    return empty($quantity) && empty($unit);
+    $ingredient_id = $this->get('ingredient_id')->getValue();
+    return empty($ingredient_id);
   }
 }
