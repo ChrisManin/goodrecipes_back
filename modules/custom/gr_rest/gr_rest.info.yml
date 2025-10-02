@@ -1,0 +1,11 @@
+name: Good Recipes Rest
+description: Module de personnalisation Rest
+type: module
+core_version_requirement: ^10
+version: '1.0'
+package: Good Recipes
+dependencies:
+  - drupal:rest
+  - drupal:serialization
+  - gr_core:gr_core
+  - redirect:redirect
