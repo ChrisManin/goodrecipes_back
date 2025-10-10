@@ -4,21 +4,21 @@ namespace Drupal\gr_rest\Routing;
 
 use Drupal\Core\ParamConverter\ParamConverterInterface;
 use Drupal\Core\Url;
-use Drupal\gr_core\Entity\Category;
+use Drupal\gr_core\Entity\Season;
 use Symfony\Component\Routing\Route;
 
-class CategoryConverter implements ParamConverterInterface {
+class SeasonConverter implements ParamConverterInterface {
   /**
    * {@inheritdoc}
    */
   public function applies($definition, $name, Route $route): bool {
-    return !empty($definition['type']) && $definition['type'] == 'entity:taxonomy_term' && $definition['vid'] == 'category';
+    return !empty($definition['type']) && $definition['type'] == 'entity:taxonomy_term' && $definition['vid'] == 'season';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function convert($value, $definition, $name, array $defaults): ?Category {
+  public function convert($value, $definition, $name, array $defaults): ?Season {
     return $this->getTermByAlias($value);
   }
 

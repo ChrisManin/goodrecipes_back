@@ -3,9 +3,17 @@
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\gr_core\Entity\Category;
+use Drupal\gr_core\Entity\Difficulty;
+use Drupal\gr_core\Entity\Season;
 
 function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['taxonomy_term']['category'])) {
     $bundles['taxonomy_term']['category']['class'] = Category::class;
+  }
+  if (isset($bundles['taxonomy_term']['difficulty'])) {
+    $bundles['taxonomy_term']['difficulty']['class'] = Difficulty::class;
+  }
+  if (isset($bundles['taxonomy_term']['season'])) {
+    $bundles['taxonomy_term']['season']['class'] = Season::class;
   }
 }

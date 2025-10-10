@@ -4,7 +4,22 @@ services:
     arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
     tags:
       - { name: normalizer, priority: 1 }
+  gr_rest.normalizer.difficulty_term_entity:
+    class: Drupal\gr_rest\Normalizer\DifficultyNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
+  gr_rest.normalizer.season_term_entity:
+    class: Drupal\gr_rest\Normalizer\SeasonNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
   gr_rest.upcasting.category_converter:
     class: Drupal\gr_rest\Routing\CategoryConverter
     tags:
-     - { name: paramconverter}
+      - { name: paramconverter }
+  gr_rest.upcasting.difficulty_converter:
+    class: Drupal\gr_rest\Routing\DifficultyConverter
+    tags:
+      - { name: paramconverter }
+  

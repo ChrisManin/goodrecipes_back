@@ -4,7 +4,7 @@ namespace Drupal\gr_core\Entity;
 
 use Drupal\taxonomy\Entity\Term;
 
-class Category extends AbstractTerm
+class Difficulty extends AbstractTerm
 {
   public function getRest(): array
   {

@@ -1,0 +1,39 @@
+uuid: 9f8c299c-f66f-4654-b2f7-e2d13f1a552a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category
+  module:
+    - path
+id: taxonomy_term.category.default
+targetEntityType: taxonomy_term
+bundle: category
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  publish_on: true
+  unpublish_on: true
