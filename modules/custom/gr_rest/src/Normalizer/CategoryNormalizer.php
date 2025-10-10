@@ -6,7 +6,7 @@ use Drupal\gr_core\Entity\Category;
 use Drupal\serialization\Normalizer\ContentEntityNormalizer;
 
 /**
- * Normalizes/denormalizes catgory objects into an array structure.
+ * Normalizes/denormalizes category objects into an array structure.
  */
 class CategoryNormalizer extends ContentEntityNormalizer
 {
