@@ -5,6 +5,7 @@ use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\gr_core\Entity\Category;
 use Drupal\gr_core\Entity\Difficulty;
 use Drupal\gr_core\Entity\Season;
+use Drupal\gr_core\Entity\DishType;
 
 function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['taxonomy_term']['category'])) {
@@ -15,5 +16,8 @@ function gr_core_entity_bundle_info_alter(array &$bundles): void {
   }
   if (isset($bundles['taxonomy_term']['season'])) {
     $bundles['taxonomy_term']['season']['class'] = Season::class;
+  }
+  if (isset($bundles['taxonomy_term']['dish_type'])) {
+    $bundles['taxonomy_term']['dish_type']['class'] = DishType::class;
   }
 }
