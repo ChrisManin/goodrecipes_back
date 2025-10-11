@@ -1,0 +1,21 @@
+uuid: ec1045d8-68c9-4b88-bef6-6f763b60bbbd
+langcode: fr
+status: true
+dependencies: {  }
+name: 115x115
+label: 115x115
+effects:
+  2283ecf5-df7a-454c-9a7c-fcc2147b25a7:
+    uuid: 2283ecf5-df7a-454c-9a7c-fcc2147b25a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 115
+      height: 115
+      anchor: center-center
+  782efeea-b465-42f7-b410-c7b7aa21b492:
+    uuid: 782efeea-b465-42f7-b410-c7b7aa21b492
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

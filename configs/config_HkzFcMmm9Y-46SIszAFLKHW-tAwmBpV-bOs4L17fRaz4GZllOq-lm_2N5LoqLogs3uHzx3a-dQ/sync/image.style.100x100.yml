@@ -1,0 +1,21 @@
+uuid: 533410c4-de5b-4936-bc4d-8ca47476da82
+langcode: fr
+status: true
+dependencies: {  }
+name: 100x100
+label: 100x100
+effects:
+  f5556773-2034-4350-9ae3-87a8a3a39136:
+    uuid: f5556773-2034-4350-9ae3-87a8a3a39136
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-center
+  c0fa5559-c6ed-48a8-b947-ed4bd3e1288c:
+    uuid: c0fa5559-c6ed-48a8-b947-ed4bd3e1288c
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

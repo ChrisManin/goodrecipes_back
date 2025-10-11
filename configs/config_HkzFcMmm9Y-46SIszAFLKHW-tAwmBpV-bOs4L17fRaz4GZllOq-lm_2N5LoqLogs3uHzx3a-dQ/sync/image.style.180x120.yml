@@ -1,0 +1,21 @@
+uuid: 64487ce3-e963-4323-8d74-b78ccedd9661
+langcode: fr
+status: true
+dependencies: {  }
+name: 180x120
+label: 180x120
+effects:
+  ad20f168-3006-49c2-a61f-dd5f80708b1d:
+    uuid: ad20f168-3006-49c2-a61f-dd5f80708b1d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 120
+      anchor: center-center
+  136be677-a97b-493f-b186-dd9cbabbba95:
+    uuid: 136be677-a97b-493f-b186-dd9cbabbba95
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

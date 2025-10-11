@@ -1,0 +1,21 @@
+uuid: 8ee6eb4c-96e1-4704-83ce-608fb44281be
+langcode: fr
+status: true
+dependencies: {  }
+name: 140x140
+label: 140x140
+effects:
+  c30c2185-0b47-45c2-8cd0-7382a2c6bf54:
+    uuid: c30c2185-0b47-45c2-8cd0-7382a2c6bf54
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 140
+      anchor: center-center
+  ff71c2c3-5f6a-425d-8103-ccd67ad23594:
+    uuid: ff71c2c3-5f6a-425d-8103-ccd67ad23594
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

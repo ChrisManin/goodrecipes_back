@@ -1,0 +1,21 @@
+uuid: 70821439-218a-4ae1-b689-be5b3a81114a
+langcode: fr
+status: true
+dependencies: {  }
+name: 340x200
+label: 340x200
+effects:
+  2c091e8f-ca92-44a4-b768-9f138562e900:
+    uuid: 2c091e8f-ca92-44a4-b768-9f138562e900
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 340
+      height: 200
+      anchor: center-center
+  5fb83108-84c2-4425-8767-0e174b90b2ae:
+    uuid: 5fb83108-84c2-4425-8767-0e174b90b2ae
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

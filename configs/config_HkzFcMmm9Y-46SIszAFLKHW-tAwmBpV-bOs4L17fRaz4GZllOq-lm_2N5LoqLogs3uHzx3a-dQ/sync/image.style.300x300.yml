@@ -1,0 +1,21 @@
+uuid: 9a2f5e60-6ab9-4552-9d8d-32bb99756bd1
+langcode: fr
+status: true
+dependencies: {  }
+name: 300x300
+label: 300x300
+effects:
+  f414b3da-c294-41a2-afea-09a63099cfb8:
+    uuid: f414b3da-c294-41a2-afea-09a63099cfb8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center
+  f1a6627c-0769-47fe-9d66-a941053a1879:
+    uuid: f1a6627c-0769-47fe-9d66-a941053a1879
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
