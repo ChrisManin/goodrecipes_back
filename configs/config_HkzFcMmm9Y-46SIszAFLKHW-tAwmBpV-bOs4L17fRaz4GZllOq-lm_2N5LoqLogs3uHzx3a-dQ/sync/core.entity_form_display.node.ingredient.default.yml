@@ -8,6 +8,7 @@ dependencies:
     - node.type.ingredient
   module:
     - image
+    - path
 id: node.ingredient.default
 targetEntityType: node
 bundle: ingredient
@@ -15,11 +16,24 @@ mode: default
 content:
   field_ingredient_visual:
     type: image_image
-    weight: 26
+    weight: 1
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -32,10 +46,8 @@ content:
 hidden:
   created: true
   langcode: true
-  path: true
   promote: true
   publish_on: true
-  status: true
   sticky: true
   uid: true
   unpublish_on: true

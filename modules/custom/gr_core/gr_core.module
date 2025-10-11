@@ -6,6 +6,8 @@ use Drupal\gr_core\Entity\Category;
 use Drupal\gr_core\Entity\Difficulty;
 use Drupal\gr_core\Entity\Season;
 use Drupal\gr_core\Entity\DishType;
+use Drupal\gr_core\Entity\Ingredient;
+use Drupal\gr_core\Entity\File;
 
 function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['taxonomy_term']['category'])) {
@@ -19,5 +21,11 @@ function gr_core_entity_bundle_info_alter(array &$bundles): void {
   }
   if (isset($bundles['taxonomy_term']['dish_type'])) {
     $bundles['taxonomy_term']['dish_type']['class'] = DishType::class;
+  }
+  if (isset($bundles['node']['ingredient'])) {
+    $bundles['node']['ingredient']['class'] = Ingredient::class;
+  }
+  if (isset($bundles['file']['file'])) {
+    $bundles['file']['file']['class'] = File::class;
   }
 }
