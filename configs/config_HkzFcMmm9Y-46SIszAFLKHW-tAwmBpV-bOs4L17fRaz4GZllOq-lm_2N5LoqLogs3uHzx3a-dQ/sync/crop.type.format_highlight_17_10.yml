@@ -1,0 +1,12 @@
+uuid: 962f09ec-fc37-47e2-9505-22e213e0f120
+langcode: fr
+status: true
+dependencies: {  }
+label: 'Format mise en avant (17:10)'
+id: format_highlight_17_10
+description: ''
+aspect_ratio: '17:10'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

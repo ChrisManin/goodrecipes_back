@@ -18,13 +18,14 @@ dependencies:
     - field.field.node.recipe.field_recipe_type
     - field.field.node.recipe.field_recipe_visual
     - field.field.node.recipe.field_season
+    - image.style.thumbnail
     - node.type.recipe
   module:
     - duration_field
     - field_group
-    - media_library
-    - paragraphs
+    - image_widget_crop
     - path
+    - quantity_field
     - text
 third_party_settings:
   field_group:
@@ -142,16 +143,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_recipe_ingredients:
-    type: entity_reference_paragraphs
+    type: quantity_default_widget
     weight: 4
     region: content
-    settings:
-      title: Paragraphe
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+    settings: {  }
     third_party_settings: {  }
   field_recipe_notes:
     type: text_textarea
@@ -207,15 +202,26 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_recipe_visual:
-    type: media_library_widget
-    weight: 2
+    type: image_widget_crop
+    weight: 3
     region: content
     settings:
-      media_types: {  }
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - format_carre_1_1
+        - format_highlight_17_10
+        - format_very_large_64_25
+        - thumbnail_format_suggestions_3_2
+      crop_types_required: {  }
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
     third_party_settings: {  }
   field_season:
     type: options_select
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

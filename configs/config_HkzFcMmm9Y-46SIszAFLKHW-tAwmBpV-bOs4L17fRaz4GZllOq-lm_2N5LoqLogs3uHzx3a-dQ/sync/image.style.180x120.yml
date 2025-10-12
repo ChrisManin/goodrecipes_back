@@ -1,0 +1,32 @@
+uuid: 64487ce3-e963-4323-8d74-b78ccedd9661
+langcode: fr
+status: true
+dependencies:
+  config:
+    - crop.type.thumbnail_format_suggestions_3_2
+  module:
+    - crop
+name: 180x120
+label: 180x120
+effects:
+  ad20f168-3006-49c2-a61f-dd5f80708b1d:
+    uuid: ad20f168-3006-49c2-a61f-dd5f80708b1d
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 180
+      height: 120
+      anchor: center-center
+  136be677-a97b-493f-b186-dd9cbabbba95:
+    uuid: 136be677-a97b-493f-b186-dd9cbabbba95
+    id: image_convert
+    weight: -8
+    data:
+      extension: webp
+  56a7ef96-9363-42b2-8565-2583cc9acf24:
+    uuid: 56a7ef96-9363-42b2-8565-2583cc9acf24
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: thumbnail_format_suggestions_3_2
+      automatic_crop_provider: null

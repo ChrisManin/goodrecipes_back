@@ -1,0 +1,32 @@
+uuid: 8ee6eb4c-96e1-4704-83ce-608fb44281be
+langcode: fr
+status: true
+dependencies:
+  config:
+    - crop.type.format_carre_1_1
+  module:
+    - crop
+name: 140x140
+label: 140x140
+effects:
+  c30c2185-0b47-45c2-8cd0-7382a2c6bf54:
+    uuid: c30c2185-0b47-45c2-8cd0-7382a2c6bf54
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 140
+      height: 140
+      anchor: center-center
+  ff71c2c3-5f6a-425d-8103-ccd67ad23594:
+    uuid: ff71c2c3-5f6a-425d-8103-ccd67ad23594
+    id: image_convert
+    weight: -8
+    data:
+      extension: webp
+  945a9d51-6d7a-4da0-ab2b-0643cf89d2e2:
+    uuid: 945a9d51-6d7a-4da0-ab2b-0643cf89d2e2
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: format_carre_1_1
+      automatic_crop_provider: null

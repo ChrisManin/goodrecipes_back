@@ -1,0 +1,32 @@
+uuid: 8276a31e-1c02-4f84-96f6-4d212d73ad7e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - crop.type.format_very_large_64_25
+  module:
+    - crop
+name: 960x375
+label: 960x375
+effects:
+  1cd522d2-461c-4c08-95a3-812565b2bc6c:
+    uuid: 1cd522d2-461c-4c08-95a3-812565b2bc6c
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 960
+      height: 375
+      anchor: center-center
+  5ced42ee-a9a9-4837-bc6b-0c5d7832a649:
+    uuid: 5ced42ee-a9a9-4837-bc6b-0c5d7832a649
+    id: image_convert
+    weight: -8
+    data:
+      extension: webp
+  fae36834-3574-4a79-ba33-9f6db8152e86:
+    uuid: fae36834-3574-4a79-ba33-9f6db8152e86
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: format_very_large_64_25
+      automatic_crop_provider: null

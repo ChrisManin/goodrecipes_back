@@ -27,4 +27,9 @@ services:
     class: Drupal\gr_rest\Routing\DifficultyConverter
     tags:
       - { name: paramconverter }
+  gr_rest.normalizer.ingredient_node_entity:
+    class: Drupal\gr_rest\Normalizer\IngredientNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
   
