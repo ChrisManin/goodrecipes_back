@@ -1,17 +1,27 @@
-uuid: bd0bd74a-1a54-480b-9771-8bf75dd521c5
+uuid: 773b5ffc-006d-44ea-b6c5-b7d3a0999c46
 langcode: fr
 status: true
 dependencies:
   module:
-    - media
+    - file
+    - image
     - node
 id: node.field_nutrition_plan_visual
 field_name: field_nutrition_plan_visual
 entity_type: node
-type: entity_reference
+type: image
 settings:
-  target_type: media
-module: core
+  target_type: file
+  display_field: false
+  display_default: true
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
 locked: false
 cardinality: 1
 translatable: true

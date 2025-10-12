@@ -10,10 +10,11 @@ dependencies:
     - field.field.node.meal.field_meal_season
     - field.field.node.meal.field_meal_starter
     - field.field.node.meal.field_meal_visual
+    - image.style.thumbnail
     - node.type.meal
   module:
     - field_group
-    - media_library
+    - image_widget_crop
     - path
     - text
 third_party_settings:
@@ -113,11 +114,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_meal_visual:
-    type: media_library_widget
-    weight: 3
+    type: image_widget_crop
+    weight: 26
     region: content
     settings:
-      media_types: {  }
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - format_carre_1_1
+        - format_highlight_17_10
+        - thumbnail_format_suggestions_3_2
+      crop_types_required: {  }
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
     third_party_settings: {  }
   path:
     type: path

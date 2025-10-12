@@ -1,17 +1,27 @@
-uuid: 40c0fb99-523c-4ec4-bf07-6caffbb0c356
+uuid: 344ae23c-e93f-4666-8d6b-2a61c5f333ba
 langcode: fr
 status: true
 dependencies:
   module:
-    - media
+    - file
+    - image
     - node
 id: node.field_recipe_visual
 field_name: field_recipe_visual
 entity_type: node
-type: entity_reference
+type: image
 settings:
-  target_type: media
-module: core
+  target_type: file
+  display_field: false
+  display_default: true
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
 locked: false
 cardinality: 1
 translatable: true
