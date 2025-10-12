@@ -1,14 +1,18 @@
 uuid: 79628663-4ecc-4a18-b845-0ff1de431140
 langcode: fr
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - crop.type.thumbnail_format_suggestions_3_2
+  module:
+    - crop
 name: 300x230
 label: 300x230
 effects:
   3bd4e14b-0896-4152-9a2b-aa60aac144a6:
     uuid: 3bd4e14b-0896-4152-9a2b-aa60aac144a6
     id: image_scale_and_crop
-    weight: 1
+    weight: -9
     data:
       width: 300
       height: 230
@@ -16,6 +20,13 @@ effects:
   4e40065b-a319-49cb-8f91-2877834df652:
     uuid: 4e40065b-a319-49cb-8f91-2877834df652
     id: image_convert
-    weight: 2
+    weight: -8
     data:
       extension: webp
+  26194fc5-f1a9-4e01-8be8-8fc80ae814e7:
+    uuid: 26194fc5-f1a9-4e01-8be8-8fc80ae814e7
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: thumbnail_format_suggestions_3_2
+      automatic_crop_provider: null

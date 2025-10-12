@@ -1,0 +1,12 @@
+uuid: 2652aebc-299e-4189-9baa-18995ce63b4d
+langcode: fr
+status: true
+dependencies: {  }
+label: 'Format vignettes suggestions (3:2)'
+id: thumbnail_format_suggestions_3_2
+description: ''
+aspect_ratio: '3:2'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

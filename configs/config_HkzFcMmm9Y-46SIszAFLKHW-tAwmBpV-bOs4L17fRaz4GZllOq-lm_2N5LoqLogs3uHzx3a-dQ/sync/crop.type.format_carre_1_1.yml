@@ -1,0 +1,12 @@
+uuid: f71c5dd3-2879-491e-bd8e-a3ab559bd463
+langcode: fr
+status: true
+dependencies: {  }
+label: 'Format carré (1:1)'
+id: format_carre_1_1
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

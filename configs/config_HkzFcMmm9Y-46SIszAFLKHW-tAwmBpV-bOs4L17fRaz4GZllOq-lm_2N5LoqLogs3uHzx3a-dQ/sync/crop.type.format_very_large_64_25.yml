@@ -1,0 +1,12 @@
+uuid: 0167448a-4026-400e-bb95-8ab9ee027462
+langcode: fr
+status: true
+dependencies: {  }
+label: 'Format très grande vignette (64:25)'
+id: format_very_large_64_25
+description: ''
+aspect_ratio: '64:25'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null
