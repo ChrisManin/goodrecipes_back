@@ -77,7 +77,6 @@ class Ingredient extends AbstractNode {
    * @throws MissingDataException
    */
   public function getRestVisual(string $field_name='field_ingredient_visual'): array {
-    // TODO : Gérer le format d'image exact en fonction des styles d'image créés
     $visual = parent::getRestVisual($field_name);
     return $visual;
   }

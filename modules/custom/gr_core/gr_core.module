@@ -8,6 +8,7 @@ use Drupal\gr_core\Entity\Season;
 use Drupal\gr_core\Entity\DishType;
 use Drupal\gr_core\Entity\Ingredient;
 use Drupal\gr_core\Entity\File;
+use Drupal\gr_core\Entity\Recipe;
 
 function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['taxonomy_term']['category'])) {
@@ -27,5 +28,8 @@ function gr_core_entity_bundle_info_alter(array &$bundles): void {
   }
   if (isset($bundles['file']['file'])) {
     $bundles['file']['file']['class'] = File::class;
+  }
+  if (isset($bundles['node']['recipe'])) {
+    $bundles['node']['recipe']['class'] = Recipe::class;
   }
 }
