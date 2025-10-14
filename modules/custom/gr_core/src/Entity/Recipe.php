@@ -3,7 +3,6 @@
 namespace Drupal\gr_core\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
-use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
 use Drupal\gr_core\Entity\AbstractNode;
 use Drupal\Core\Datetime\DrupalDateTime;
 
@@ -72,45 +71,7 @@ class Recipe extends AbstractNode {
         case 'visual':
           $data = $this->getRestVisual();
           break;
-        case 'caloric_intake':
-          $data = $this->getCaloricIntake();
-          break;
-        case 'category':
-          $data = $this->getCategory();
-          break;
-        case 'cooking_duration':
-          $data = $this->getCookingDuration();
-          break;
-        case 'prepare_duration':
-          $data = $this->getPrepareDuration();
-          break;
-        case 'description':
-          $data = $this->getDescription();
-          break;
-        case 'difficulty':
-          $data = $this->getDifficulty();
-          break;
-        case 'ingredients':
-          $data = $this->getIngredients();
-          break;
-        case 'notes':
-          $data = $this->getNotes();
-          break;
-        case 'preparation':
-          $data = $this->getPreparation();
-          break;
-        case 'servings':
-          $data = $this->getServings();
-          break;
-        case 'source':
-          $data = $this->getSource();
-          break;
-        case 'tags':
-          $data = $this->getTags();
-          break;
-        case 'dish_type':
-          $data = $this->getDishType();
-          break;
+        
       }
       if ($data) {
         $rest[$field] = $data;
@@ -147,55 +108,5 @@ class Recipe extends AbstractNode {
     return $visual;
   }
 
-  public function getCaloricIntake() {
-    if (!$this->get('field_recipe_caloric_intake')->isEmpty()) {
-      return $this->get('field_recipe_caloric_intake')->value;
-    }
-    return NULL;
-  }
-
-  public function getCookingDuration() {
-    
-  }
-
-  public function getPrepareDuration() {
-    
-  }
-
-  public function getDescription() {
-    
-  }
-
-  public function getDifficulty() {
-    
-  }
-
-  public function getIngredients() {
-    
-  }
-
-  public function getNotes() {
-    
-  }
-
-  public function getPreparation() {
-    
-  }
-
-  public function getServings() {
-    
-  }
-
-  public function getSource() {
-    
-  }
-
-  public function getTags() {
-    
-  }
-
-  public function getDishType() {
-    
-  }
 
 }

@@ -26,10 +26,11 @@ function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['node']['ingredient'])) {
     $bundles['node']['ingredient']['class'] = Ingredient::class;
   }
-  if (isset($bundles['file']['file'])) {
-    $bundles['file']['file']['class'] = File::class;
-  }
   if (isset($bundles['node']['recipe'])) {
     $bundles['node']['recipe']['class'] = Recipe::class;
   }
+  if (isset($bundles['file']['file'])) {
+    $bundles['file']['file']['class'] = File::class;
+  }
+  
 }
