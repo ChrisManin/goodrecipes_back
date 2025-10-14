@@ -36,4 +36,5 @@ services:
     class: Drupal\gr_rest\Normalizer\RecipeNormalizer
     arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
     tags:
-      - { name: normalizer, priority: 50 }
+      - { name: normalizer, priority: 10 }
+  
