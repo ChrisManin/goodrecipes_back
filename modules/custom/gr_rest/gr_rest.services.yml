@@ -37,4 +37,14 @@ services:
     arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
     tags:
       - { name: normalizer, priority: 10 }
+  gr_rest.normalizer.measurement_term_entity:
+    class: Drupal\gr_rest\Normalizer\MeasurementNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
+  gr_rest.normalizer.tag_term_entity:
+    class: Drupal\gr_rest\Normalizer\TagNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
   

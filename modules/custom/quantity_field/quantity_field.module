@@ -31,7 +31,7 @@ function quantity_field_entity_presave(EntityInterface $entity) {
   }
 
   // On ne traite que les nodes de type "recette".
-  if ($entity->bundle() !== 'recette') {
+  if ($entity->bundle() !== 'recipe') {
     return;
   }
 
