@@ -47,4 +47,18 @@ services:
     arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
     tags:
       - { name: normalizer, priority: 10 }
-  
+  gr_rest.normalizer.meal_node_entity:
+    class: Drupal\gr_rest\Normalizer\MealNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
+  gr_rest.normalizer.nutrition_plan_node_entity:
+    class: Drupal\gr_rest\Normalizer\NutritionPlanNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
+  gr_rest.normalizer.ingredient_paragraph_entity:
+    class: Drupal\gr_rest\Normalizer\IngredientParagraphNormalizer
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
