@@ -1,0 +1,13 @@
+name: Good Recipe Theme
+type: Theme
+description: 'Drupal administration theme with modern minimalist design'
+base theme: adminimal_theme
+core_version_requirement: ^10
+version: '1.0'
+package: RCF
+libraries:
+  - gr_theme/global-styling
+regions:
+  home_page: "Page d'accueil"
+  category: "Catégorie"
+  content: "Content"

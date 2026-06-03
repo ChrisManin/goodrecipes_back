@@ -52,4 +52,22 @@ abstract class AbstractNode extends Node
     $entity_type = key($params);
     return \Drupal::entityTypeManager()->getStorage($entity_type)->load($params[$entity_type]);
   }
+
+  /**
+   * Return the category
+   *
+   * @return ?Category
+   */
+  public function getCategory(): ?Category
+  {
+    /** @var \Drupal\gr_core\Entity\Category */
+    $category = $this
+      ?->field_category
+      ?->first()
+      ?->get('entity')
+      ?->getTarget()
+      ?->getValue();
+
+    return $category;
+  }
 }

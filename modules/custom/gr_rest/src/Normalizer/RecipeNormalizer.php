@@ -20,7 +20,7 @@ class RecipeNormalizer extends ContentEntityNormalizer {
    * {@inheritdoc}
    * @param Recipe $recipe
    */
-  public function normalizer($recipe, $format = NULL, array $context = array()): array|bool|string|int|float|null|\ArrayObject {
+  public function normalize($recipe, $format = NULL, array $context = array()): array|bool|string|int|float|null|\ArrayObject {
     return $recipe->getRest();
   }
 }
