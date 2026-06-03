@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.ingredient
     - node.type.meal
+    - node.type.nutrition_plan
     - node.type.recipe
   module:
     - node
@@ -1097,7 +1098,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            recipe: recipe
+            nutrition_plan: nutrition_plan
           group: 1
           exposed: false
           expose:

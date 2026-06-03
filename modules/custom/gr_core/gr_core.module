@@ -11,6 +11,9 @@ use Drupal\gr_core\Entity\Tag;
 use Drupal\gr_core\Entity\Ingredient;
 use Drupal\gr_core\Entity\File;
 use Drupal\gr_core\Entity\Recipe;
+use Drupal\gr_core\Entity\Meal;
+use Drupal\gr_core\Entity\NutritionPlan;
+use Drupal\gr_core\Entity\IngredientParagraph;
 
 function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['taxonomy_term']['category'])) {
@@ -40,5 +43,13 @@ function gr_core_entity_bundle_info_alter(array &$bundles): void {
   if (isset($bundles['file']['file'])) {
     $bundles['file']['file']['class'] = File::class;
   }
-  
+  if (isset($bundles['node']['meal'])) {
+    $bundles['node']['meal']['class'] = Meal::class;
+  }
+  if (isset($bundles['node']['nutrition_plan'])) {
+    $bundles['node']['nutrition_plan']['class'] = NutritionPlan::class;
+  }
+  if (isset($bundles['paragraph']['ingredient_paragraph'])) {
+    $bundles['paragraph']['ingredient_paragraph']['class'] = IngredientParagraph::class;
+  }
 }
