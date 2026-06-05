@@ -1,0 +1,31 @@
+uuid: 4fb5ea3d-46fd-4446-b979-8114a18f6836
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.measurement.field_measurement_abbreviation
+    - taxonomy.vocabulary.measurement
+  module:
+    - text
+id: taxonomy_term.measurement.default
+targetEntityType: taxonomy_term
+bundle: measurement
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_measurement_abbreviation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,24 @@
+uuid: 8f95f633-91ef-4646-b78c-157eb915e41d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_step_paragraph_description
+    - filter.format.fully_html
+    - paragraphs.paragraphs_type.step_paragraph
+  module:
+    - text
+id: paragraph.step_paragraph.field_step_paragraph_description
+field_name: field_step_paragraph_description
+entity_type: paragraph
+bundle: step_paragraph
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - fully_html
+field_type: text_long

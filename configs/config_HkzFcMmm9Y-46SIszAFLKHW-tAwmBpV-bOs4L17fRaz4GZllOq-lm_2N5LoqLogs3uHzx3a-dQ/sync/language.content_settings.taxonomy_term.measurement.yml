@@ -1,0 +1,11 @@
+uuid: 369916c6-d379-4496-8eda-be6d71a98ec2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.measurement
+id: taxonomy_term.measurement
+target_entity_type_id: taxonomy_term
+target_bundle: measurement
+default_langcode: site_default
+language_alterable: false

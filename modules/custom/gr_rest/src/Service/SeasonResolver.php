@@ -9,11 +9,10 @@ class SeasonResolver {
   // Maps month number to French season term name.
   // Term names in the 'season' vocabulary MUST match exactly.
   private const SEASON_BY_MONTH = [
-    1 => 'Hiver', 2 => 'Hiver',
-    3 => 'Printemps', 4 => 'Printemps', 5 => 'Printemps',
-    6 => 'Été', 7 => 'Été', 8 => 'Été',
-    9 => 'Automne', 10 => 'Automne', 11 => 'Automne',
-    12 => 'Hiver',
+    1 => 'Hiver', 2 => 'Hiver', 3 => 'Hiver',
+    4 => 'Printemps', 5 => 'Printemps', 6 => 'Printemps',
+    7 => 'Été', 8 => 'Été', 9 => 'Été',
+    10 => 'Automne', 11 => 'Automne', 12 => 'Automne',
   ];
 
   public function __construct(

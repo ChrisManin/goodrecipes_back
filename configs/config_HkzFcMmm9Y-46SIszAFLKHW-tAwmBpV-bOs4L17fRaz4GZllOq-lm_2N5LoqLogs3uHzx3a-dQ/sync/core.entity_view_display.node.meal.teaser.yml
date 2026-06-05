@@ -1,0 +1,40 @@
+uuid: ddc87622-ba15-4e11-831d-f5d0a605850d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.meal.field_meal_category
+    - field.field.node.meal.field_meal_date
+    - field.field.node.meal.field_meal_description
+    - field.field.node.meal.field_meal_dessert
+    - field.field.node.meal.field_meal_main_dish
+    - field.field.node.meal.field_meal_season
+    - field.field.node.meal.field_meal_starter
+    - field.field.node.meal.field_meal_type
+    - field.field.node.meal.field_meal_visual
+    - node.type.meal
+  module:
+    - user
+id: node.meal.teaser
+targetEntityType: node
+bundle: meal
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_meal_category: true
+  field_meal_date: true
+  field_meal_description: true
+  field_meal_dessert: true
+  field_meal_main_dish: true
+  field_meal_season: true
+  field_meal_starter: true
+  field_meal_type: true
+  field_meal_visual: true
+  langcode: true
+  search_api_excerpt: true

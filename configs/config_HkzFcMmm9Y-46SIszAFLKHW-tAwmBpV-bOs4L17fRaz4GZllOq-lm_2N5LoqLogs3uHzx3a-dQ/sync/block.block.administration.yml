@@ -1,0 +1,25 @@
+uuid: acd058e1-90da-411b-a59f-61fb7e51cbfe
+langcode: fr
+status: true
+dependencies:
+  module:
+    - draggable_dashboard
+    - system
+  theme:
+    - adminimal_theme
+id: administration
+theme: adminimal_theme
+region: content
+weight: 0
+provider: null
+plugin: 'draggable_dashboard_block:draggable_dashboard_administration'
+settings:
+  id: 'draggable_dashboard_block:draggable_dashboard_administration'
+  label: Administration
+  label_display: visible
+  provider: draggable_dashboard
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/front

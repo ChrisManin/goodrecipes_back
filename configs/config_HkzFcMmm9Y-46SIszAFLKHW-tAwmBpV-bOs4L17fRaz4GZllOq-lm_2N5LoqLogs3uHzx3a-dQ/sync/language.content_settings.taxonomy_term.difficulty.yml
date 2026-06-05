@@ -1,0 +1,11 @@
+uuid: 3eca4f8d-7ca4-4d2a-9dff-bc3f5c61d77f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.difficulty
+id: taxonomy_term.difficulty
+target_entity_type_id: taxonomy_term
+target_bundle: difficulty
+default_langcode: site_default
+language_alterable: false

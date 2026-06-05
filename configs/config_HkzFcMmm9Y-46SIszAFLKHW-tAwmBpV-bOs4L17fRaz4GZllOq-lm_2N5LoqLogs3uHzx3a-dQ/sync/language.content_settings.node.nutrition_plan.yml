@@ -1,0 +1,11 @@
+uuid: b4f7b133-8643-4541-baac-7a737978b36a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.nutrition_plan
+id: node.nutrition_plan
+target_entity_type_id: node
+target_bundle: nutrition_plan
+default_langcode: site_default
+language_alterable: false

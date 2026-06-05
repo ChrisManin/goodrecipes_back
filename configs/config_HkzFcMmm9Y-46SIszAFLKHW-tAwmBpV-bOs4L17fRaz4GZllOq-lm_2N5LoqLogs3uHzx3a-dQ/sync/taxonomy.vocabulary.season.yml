@@ -1,0 +1,25 @@
+uuid: e41233cc-7887-4070-b7f9-8841026c5e07
+langcode: fr
+status: true
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Saison
+vid: season
+description: null
+weight: 0
+new_revision: false

@@ -60,7 +60,7 @@ function quantity_field_entity_presave(EntityInterface $entity) {
           'entity_id' => $entity->id(),
           'entity_type' => 'node',
           'field_name' => 'field_recipe_ingredients',
-          'ingredient_id' => $ingredient['target_id'],
+          'ingredient_id' => $ingredient['ingredient_id'],
           'quantity' => $ingredient['quantity'],
           'unit' => $ingredient['unit'],
         ])

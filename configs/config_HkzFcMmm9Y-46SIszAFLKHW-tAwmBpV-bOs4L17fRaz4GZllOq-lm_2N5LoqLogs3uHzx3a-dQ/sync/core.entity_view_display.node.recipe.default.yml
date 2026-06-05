@@ -1,0 +1,133 @@
+uuid: 826bb403-230b-4423-9740-0fb224393e88
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.field_recipe_caloric_intake
+    - field.field.node.recipe.field_recipe_category
+    - field.field.node.recipe.field_recipe_cooking_duration
+    - field.field.node.recipe.field_recipe_description
+    - field.field.node.recipe.field_recipe_difficulty
+    - field.field.node.recipe.field_recipe_ingredients
+    - field.field.node.recipe.field_recipe_notes
+    - field.field.node.recipe.field_recipe_prepare_duration
+    - field.field.node.recipe.field_recipe_servings
+    - field.field.node.recipe.field_recipe_source
+    - field.field.node.recipe.field_recipe_steps
+    - field.field.node.recipe.field_recipe_tags
+    - field.field.node.recipe.field_recipe_thermomix
+    - field.field.node.recipe.field_recipe_type
+    - field.field.node.recipe.field_recipe_visual
+    - field.field.node.recipe.field_season
+    - node.type.recipe
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  field_recipe_caloric_intake:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_recipe_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_recipe_difficulty:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_recipe_servings:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_recipe_steps:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_recipe_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_recipe_thermomix:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_recipe_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_recipe_visual:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_season:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_recipe_cooking_duration: true
+  field_recipe_description: true
+  field_recipe_ingredients: true
+  field_recipe_notes: true
+  field_recipe_prepare_duration: true
+  field_recipe_source: true
+  langcode: true
+  search_api_excerpt: true

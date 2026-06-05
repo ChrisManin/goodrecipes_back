@@ -1,0 +1,34 @@
+uuid: a9888007-6f9b-4ce8-b7e4-bc8df7379bfb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_steps
+    - node.type.recipe
+    - paragraphs.paragraphs_type.step_paragraph
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_recipe_steps
+field_name: field_recipe_steps
+entity_type: node
+bundle: recipe
+label: 'Étapes de préparation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      step_paragraph: step_paragraph
+    negate: 0
+    target_bundles_drag_drop:
+      ingredient_paragraph:
+        weight: 3
+        enabled: false
+      step_paragraph:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

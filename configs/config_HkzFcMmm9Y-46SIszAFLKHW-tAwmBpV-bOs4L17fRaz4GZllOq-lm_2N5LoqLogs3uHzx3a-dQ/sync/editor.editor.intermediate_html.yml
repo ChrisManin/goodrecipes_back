@@ -38,4 +38,5 @@ settings:
       allowed_tags: {  }
     media_media:
       allow_view_mode_override: false
-image_upload: {  }
+image_upload:
+  status: false

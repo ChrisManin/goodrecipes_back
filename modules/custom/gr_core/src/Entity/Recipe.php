@@ -43,7 +43,7 @@ class Recipe extends AbstractNode
 		'difficulty',
 		'ingredients',
 		'notes',
-		'preparation',
+		'steps',
 		'servings',
 		'source',
 		'tags',
@@ -98,8 +98,8 @@ class Recipe extends AbstractNode
 				case 'notes':
 					$data = $this->getNotes();
 					break;
-				case 'preparation':
-					$data = $this->getPreparation();
+				case 'steps':
+					$data = $this->getSteps();
 					break;
 				case 'servings':
 					$data = $this->getServings();
@@ -211,12 +211,16 @@ class Recipe extends AbstractNode
 		return null;
 	}
 
-	public function getPreparation(): ?string
+	public function getSteps(): ?array
 	{
-		if (!$this->get('field_recipe_preparation')->isEmpty()) {
-			return $this->get('field_recipe_preparation')->value;
+		$steps = [];
+		foreach ($this->get('field_recipe_steps') as $item) {
+			$step = $item->get('entity')?->getTarget()?->getValue();
+			if ($step) {
+				$steps[] = $step->getRest();
+			}
 		}
-		return null;
+		return $steps ?: null;
 	}
 
 	public function getServings(): ?int

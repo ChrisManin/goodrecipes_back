@@ -1,0 +1,11 @@
+uuid: eafe1c7e-27dc-4ef2-b0e8-6058406ebe9b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+id: node.recipe
+target_entity_type_id: node
+target_bundle: recipe
+default_langcode: site_default
+language_alterable: false

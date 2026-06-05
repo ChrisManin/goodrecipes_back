@@ -1,0 +1,25 @@
+uuid: 932b1b6a-cf3f-4452-957b-f2e992e29b94
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.step_paragraph.field_step_paragraph_description
+    - paragraphs.paragraphs_type.step_paragraph
+  module:
+    - text
+id: paragraph.step_paragraph.default
+targetEntityType: paragraph
+bundle: step_paragraph
+mode: default
+content:
+  field_step_paragraph_description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 6
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

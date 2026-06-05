@@ -1,0 +1,10 @@
+uuid: 2167d280-81dc-4f62-800b-7a4bb83ea627
+langcode: fr
+status: true
+dependencies: {  }
+id: step_paragraph
+label: Étape
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
