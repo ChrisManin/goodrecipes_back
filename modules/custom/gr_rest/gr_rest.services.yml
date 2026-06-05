@@ -62,3 +62,9 @@ services:
     arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
     tags:
       - { name: normalizer, priority: 10 }
+  gr_rest.service.season_resolver:
+    class: Drupal\gr_rest\Service\SeasonResolver
+    arguments: ['@entity_type.manager']
+  gr_rest.finder.homepage:
+    class: Drupal\gr_rest\Finder\HomePageFinder
+    arguments: ['@entity_type.manager', '@gr_rest.service.season_resolver']

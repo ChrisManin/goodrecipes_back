@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.recipe.field_recipe_servings
     - field.field.node.recipe.field_recipe_source
     - field.field.node.recipe.field_recipe_tags
+    - field.field.node.recipe.field_recipe_thermomix
     - field.field.node.recipe.field_recipe_type
     - field.field.node.recipe.field_recipe_visual
     - field.field.node.recipe.field_season
@@ -50,6 +51,7 @@ third_party_settings:
       children:
         - field_recipe_notes
         - field_recipe_source
+        - field_recipe_thermomix
       label: 'Notes et source'
       region: content
       parent_name: ''
@@ -194,6 +196,13 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_recipe_thermomix:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_recipe_type:
     type: options_select

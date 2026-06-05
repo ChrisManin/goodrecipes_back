@@ -7,6 +7,7 @@ class Meal extends AbstractNode
   public function getRest(array $fields = [
     'id', 'type', 'title', 'alias', 'visual',
     'description', 'category', 'season', 'starter', 'main_dish', 'dessert',
+    'date', 'meal_type',
   ]): array {
     $rest = [];
 
@@ -45,6 +46,12 @@ class Meal extends AbstractNode
           break;
         case 'dessert':
           $data = $this->getDessert()?->getRest(['id', 'type', 'title', 'alias', 'visual']);
+          break;
+        case 'date':
+          $data = $this->getMealDate();
+          break;
+        case 'meal_type':
+          $data = $this->getMealType();
           break;
       }
       if ($data) {
@@ -91,5 +98,21 @@ class Meal extends AbstractNode
   public function getDessert(): ?Recipe
   {
     return $this->field_meal_dessert?->first()?->get('entity')?->getTarget()?->getValue();
+  }
+
+  public function getMealDate(): ?string
+  {
+    if (!$this->get('field_meal_date')->isEmpty()) {
+      return $this->get('field_meal_date')->value;
+    }
+    return NULL;
+  }
+
+  public function getMealType(): ?string
+  {
+    if (!$this->get('field_meal_type')->isEmpty()) {
+      return $this->get('field_meal_type')->value;
+    }
+    return NULL;
   }
 }

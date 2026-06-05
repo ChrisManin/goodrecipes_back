@@ -1,0 +1,18 @@
+uuid: 831e93bf-2055-40a6-a72a-8d123f7d58ba
+langcode: fr
+status: true
+dependencies:
+  module:
+    - gr_rest
+    - serialization
+    - user
+id: gr_homepage
+plugin_id: gr_homepage
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

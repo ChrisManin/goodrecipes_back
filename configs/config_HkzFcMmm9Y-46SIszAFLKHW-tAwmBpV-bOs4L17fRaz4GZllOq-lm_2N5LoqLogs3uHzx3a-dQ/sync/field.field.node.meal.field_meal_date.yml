@@ -1,0 +1,21 @@
+uuid: f54b70bc-c5c0-4ea8-ad43-4a74ccbc95dd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meal_date
+    - node.type.meal
+  module:
+    - datetime
+id: node.meal.field_meal_date
+field_name: field_meal_date
+entity_type: node
+bundle: meal
+label: 'Date du repas'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
