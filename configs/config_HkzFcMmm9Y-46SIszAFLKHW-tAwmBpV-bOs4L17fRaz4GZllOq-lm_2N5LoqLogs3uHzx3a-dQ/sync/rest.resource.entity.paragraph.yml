@@ -1,0 +1,18 @@
+uuid: 8d7e5246-3b33-4f90-9215-de8770629749
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - serialization
+    - user
+id: entity.paragraph
+plugin_id: 'entity:paragraph'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

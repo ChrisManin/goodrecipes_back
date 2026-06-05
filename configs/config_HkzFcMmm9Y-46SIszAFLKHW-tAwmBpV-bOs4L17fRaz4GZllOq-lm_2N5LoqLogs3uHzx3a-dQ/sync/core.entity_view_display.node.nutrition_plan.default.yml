@@ -1,0 +1,73 @@
+uuid: 1f0ca7d4-f059-49eb-bdf4-ca25880ad1a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.nutrition_plan.field_nutrition_plan_description
+    - field.field.node.nutrition_plan.field_nutrition_plan_end_date
+    - field.field.node.nutrition_plan.field_nutrition_plan_meals
+    - field.field.node.nutrition_plan.field_nutrition_plan_start_date
+    - field.field.node.nutrition_plan.field_nutrition_plan_visual
+    - node.type.nutrition_plan
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.nutrition_plan.default
+targetEntityType: node
+bundle: nutrition_plan
+mode: default
+content:
+  field_nutrition_plan_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_nutrition_plan_end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_nutrition_plan_meals:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_nutrition_plan_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_nutrition_plan_visual:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

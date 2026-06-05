@@ -1,0 +1,22 @@
+uuid: 7fc81dd4-2bd0-47b0-9671-a0ae73db6136
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.meal
+id: node.meal.promote
+field_name: promote
+entity_type: node
+bundle: meal
+label: "Promu en page d'accueil"
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

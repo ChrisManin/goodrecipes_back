@@ -1,0 +1,23 @@
+uuid: fba835f9-8377-4a7e-9731-852f3e99c6fd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.step_paragraph.field_step_paragraph_description
+    - paragraphs.paragraphs_type.step_paragraph
+  module:
+    - text
+id: paragraph.step_paragraph.default
+targetEntityType: paragraph
+bundle: step_paragraph
+mode: default
+content:
+  field_step_paragraph_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

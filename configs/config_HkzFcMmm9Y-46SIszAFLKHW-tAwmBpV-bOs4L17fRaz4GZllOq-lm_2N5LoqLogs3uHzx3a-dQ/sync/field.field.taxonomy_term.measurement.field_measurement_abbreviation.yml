@@ -1,0 +1,24 @@
+uuid: fe27795d-6117-4bc5-9269-f45c39fc2032
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_measurement_abbreviation
+    - filter.format.plain_text
+    - taxonomy.vocabulary.measurement
+  module:
+    - text
+id: taxonomy_term.measurement.field_measurement_abbreviation
+field_name: field_measurement_abbreviation
+entity_type: taxonomy_term
+bundle: measurement
+label: Abréviation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

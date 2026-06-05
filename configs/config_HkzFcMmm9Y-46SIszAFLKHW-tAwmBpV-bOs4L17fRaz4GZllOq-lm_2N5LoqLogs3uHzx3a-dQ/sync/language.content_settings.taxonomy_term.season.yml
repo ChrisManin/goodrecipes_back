@@ -1,0 +1,11 @@
+uuid: 06392311-dacb-41e4-8217-b70ed2b274e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.season
+id: taxonomy_term.season
+target_entity_type_id: taxonomy_term
+target_bundle: season
+default_langcode: site_default
+language_alterable: false

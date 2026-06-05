@@ -1,0 +1,32 @@
+uuid: 6424f78a-093a-4e25-829f-40cf16520a6b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nutrition_plan.field_nutrition_plan_description
+    - field.field.node.nutrition_plan.field_nutrition_plan_end_date
+    - field.field.node.nutrition_plan.field_nutrition_plan_meals
+    - field.field.node.nutrition_plan.field_nutrition_plan_start_date
+    - field.field.node.nutrition_plan.field_nutrition_plan_visual
+    - node.type.nutrition_plan
+  module:
+    - user
+id: node.nutrition_plan.teaser
+targetEntityType: node
+bundle: nutrition_plan
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_nutrition_plan_description: true
+  field_nutrition_plan_end_date: true
+  field_nutrition_plan_meals: true
+  field_nutrition_plan_start_date: true
+  field_nutrition_plan_visual: true
+  langcode: true
+  search_api_excerpt: true

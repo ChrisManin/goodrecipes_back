@@ -1,0 +1,108 @@
+uuid: 44fb3c67-2d58-4845-9676-cc050d5d8979
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.meal.field_meal_category
+    - field.field.node.meal.field_meal_date
+    - field.field.node.meal.field_meal_description
+    - field.field.node.meal.field_meal_dessert
+    - field.field.node.meal.field_meal_main_dish
+    - field.field.node.meal.field_meal_season
+    - field.field.node.meal.field_meal_starter
+    - field.field.node.meal.field_meal_type
+    - field.field.node.meal.field_meal_visual
+    - node.type.meal
+  module:
+    - datetime
+    - image
+    - options
+    - text
+    - user
+id: node.meal.default
+targetEntityType: node
+bundle: meal
+mode: default
+content:
+  field_meal_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_meal_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_meal_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_meal_dessert:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_meal_main_dish:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_meal_season:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_meal_starter:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_meal_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_meal_visual:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,13 @@
+uuid: 17e2dc44-cd0f-46b5-a905-10838ffd730d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.ingredient_paragraph
+id: paragraph.ingredient_paragraph.default
+targetEntityType: paragraph
+bundle: ingredient_paragraph
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

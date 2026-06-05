@@ -1,0 +1,22 @@
+uuid: 5198e2b1-c378-43ac-8a1c-a13f9a9c75b7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.nutrition_plan
+id: node.nutrition_plan.status
+field_name: status
+entity_type: node
+bundle: nutrition_plan
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

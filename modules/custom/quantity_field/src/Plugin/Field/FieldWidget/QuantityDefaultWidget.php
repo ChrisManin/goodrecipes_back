@@ -5,6 +5,7 @@ namespace Drupal\quantity_field\Plugin\Field\FieldWidget;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
 
 /**
  * Plugin implementation of the 'quantity_default_widget' widget.
@@ -38,7 +39,11 @@ class QuantityDefaultWidget extends WidgetBase {
       '#target_type' => 'node',
       '#selection_handler' => 'default',
       '#selection_settings' => ['target_bundles' => ['ingredient']],
-      '#default_value' => isset($items[$delta]->ingredient_id) ? \Drupal\node\Entity\Node::load($items[$delta]->ingredient_id) : NULL,
+      '#autocreate' => [
+        'bundle' => 'ingredient',
+        'uid' => \Drupal::currentUser()->id(),
+      ],
+      '#default_value' => isset($items[$delta]->ingredient_id) ? Node::load($items[$delta]->ingredient_id) : NULL,
       '#required' => FALSE,
     ];
 
@@ -59,6 +64,30 @@ class QuantityDefaultWidget extends WidgetBase {
     ];
 
     return $element;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function massageFormValues(array $values, array $form, FormStateInterface $form_state) {
+    foreach ($values as &$value) {
+      $raw = $value['ingredient_id'] ?? NULL;
+
+      if (is_array($raw) && isset($raw['entity'])) {
+        // Autocreate : nouvel ingrédient tapé manuellement.
+        $entity = $raw['entity'];
+        $entity->set('status', 1);
+        $entity->save();
+        $value['ingredient_id'] = $entity->id();
+      }
+      elseif (is_numeric($raw)) {
+        $value['ingredient_id'] = (int) $raw;
+      }
+      else {
+        $value['ingredient_id'] = NULL;
+      }
+    }
+    return $values;
   }
 
   /**

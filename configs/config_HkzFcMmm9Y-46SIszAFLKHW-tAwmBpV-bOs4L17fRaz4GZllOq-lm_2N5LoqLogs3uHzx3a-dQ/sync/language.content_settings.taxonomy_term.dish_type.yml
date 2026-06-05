@@ -1,0 +1,11 @@
+uuid: 91b07eb4-cc94-400f-a7a4-3aec1654a481
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.dish_type
+id: taxonomy_term.dish_type
+target_entity_type_id: taxonomy_term
+target_bundle: dish_type
+default_langcode: site_default
+language_alterable: false
