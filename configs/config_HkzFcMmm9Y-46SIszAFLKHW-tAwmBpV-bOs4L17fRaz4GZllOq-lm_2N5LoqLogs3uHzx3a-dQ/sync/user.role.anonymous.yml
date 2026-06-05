@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - rest.resource.gr_homepage
   module:
     - comment
     - contact
     - filter
     - media
+    - rest
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -20,5 +22,6 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'restful get gr_homepage'
   - 'use text format restricted_html'
   - 'view media'

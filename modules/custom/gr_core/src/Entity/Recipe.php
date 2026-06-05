@@ -47,7 +47,8 @@ class Recipe extends AbstractNode
 		'servings',
 		'source',
 		'tags',
-		'dish_type'
+		'dish_type',
+		'thermomix',
 	]): array
 	{
 		$rest = [];
@@ -111,6 +112,9 @@ class Recipe extends AbstractNode
 					break;
 				case 'dish_type':
 					$data = $this->getDishType();
+					break;
+				case 'thermomix':
+					$data = $this->getThermomix();
 					break;
 			}
 			if ($data) {
@@ -247,5 +251,10 @@ class Recipe extends AbstractNode
 	{
 		$dish_type = $this->field_recipe_type?->first()?->get('entity')?->getTarget()?->getValue();
 		return $dish_type?->getRest();
+	}
+
+	public function getThermomix(): bool
+	{
+		return (bool) $this->get('field_recipe_thermomix')->value;
 	}
 }
