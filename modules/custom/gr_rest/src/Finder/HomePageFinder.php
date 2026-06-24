@@ -14,7 +14,7 @@ class HomePageFinder {
   ];
 
   // Minimal recipe fields for homepage cards.
-  private const RECIPE_CARD_FIELDS = ['id', 'type', 'title', 'alias', 'visual', 'created'];
+  private const RECIPE_CARD_FIELDS = ['id', 'type', 'title', 'alias', 'visual', 'created', 'description'];
 
   public function __construct(
     protected EntityTypeManagerInterface $entityTypeManager,
