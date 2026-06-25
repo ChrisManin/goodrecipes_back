@@ -1,0 +1,23 @@
+uuid: c8142c34-baf8-4ae2-849c-8ed6824a5f87
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_rest_time
+    - node.type.recipe
+  module:
+    - duration_field
+id: node.recipe.field_recipe_rest_time
+field_name: field_recipe_rest_time
+entity_type: node
+bundle: recipe
+label: 'Temps de repos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  granularity: 'h:i'
+  include_weeks: false
+field_type: duration

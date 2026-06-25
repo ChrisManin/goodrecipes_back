@@ -1,0 +1,19 @@
+uuid: 2dbc127a-0b81-481b-a18f-5a413e3cdd83
+langcode: fr
+status: true
+dependencies:
+  module:
+    - duration_field
+    - node
+id: node.field_recipe_rest_time
+field_name: field_recipe_rest_time
+entity_type: node
+type: duration
+settings: {  }
+module: duration_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

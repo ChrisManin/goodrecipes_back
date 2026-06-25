@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.recipe.field_recipe_ingredients
     - field.field.node.recipe.field_recipe_notes
     - field.field.node.recipe.field_recipe_prepare_duration
+    - field.field.node.recipe.field_recipe_rest_time
     - field.field.node.recipe.field_recipe_servings
     - field.field.node.recipe.field_recipe_source
     - field.field.node.recipe.field_recipe_steps
@@ -34,7 +35,6 @@ third_party_settings:
     group_ingredients_preparation:
       children:
         - field_recipe_ingredients
-        - field_recipe_preparation
         - field_recipe_steps
       label: 'Ingrédients et préparation'
       region: content
@@ -70,6 +70,7 @@ third_party_settings:
     group_timing:
       children:
         - field_recipe_prepare_duration
+        - field_recipe_rest_time
         - field_recipe_cooking_duration
       label: Timing
       region: content
@@ -128,7 +129,7 @@ content:
     third_party_settings: {  }
   field_recipe_cooking_duration:
     type: duration_widget
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -163,6 +164,12 @@ content:
   field_recipe_prepare_duration:
     type: duration_widget
     weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_recipe_rest_time:
+    type: duration_widget
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
